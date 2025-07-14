@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>ESPAÇO E ARTE</title>
+        <meta charset="utf-8" />
+        <meta name="author" content="Leticia Lorrane e Leticia Meneses" />
+        <meta name="keywords" content="Móveis planeados,Design de Interiores,Móveis sob medida,Planejados" />
+        <meta name="description" content="“Especialistas em móveis planejados e design de interiores para residências e ambientes corporativos. Estilo, otimização de espaço e qualidade" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+      <img src="img/LOGO.png" alt="Espaço e Arte">
+      </a>
+    </div>
+    <nav class="menu">
+      <ul>
+        <li><a href="moveis.html">MÓVEIS PLANEJADOS</a></li>
+        <li><a href="#">PROJETO DE INTERIORES</a></li>
+        <li><a href="#">ASSESSORIA EM OBRAS</a></li>
+        <li><a href="#">CONTATO</a></li>
+        <li><a href="#">SOBRE NÓS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+   <div class="banner-carrossel">
+  <!-- Controles -->
+  <input type="radio" name="banner-slide" id="banner1" checked>
+  <input type="radio" name="banner-slide" id="banner2">
+  <input type="radio" name="banner-slide" id="banner3">
+
+  <!-- Slides -->
+  <div class="banner-slides">
+    <div class="banner-slide-imagem">
+      <img src="img/index-banner.png" alt="Banner 1">
+    </div>
+    <div class="banner-slide-imagem">
+      <img src="img/index-banner-promo.png" alt="Banner 2">
+    </div>
+    <div class="banner-slide-imagem">
+      <img src="img/index-banner-promo2.png" alt="Banner 3">
+    </div>
+  </div>
+
+  <!-- Indicadores -->
+  <div class="banner-indicadores">
+    <label for="banner1" class="bolinha"></label>
+    <label for="banner2" class="bolinha"></label>
+    <label for="banner3" class="bolinha"></label>
+  </div>
+</div>
+    <div class="frase">
+      <span>Soluções completas para transformar seu espaço</span>
+    </div>
+
+   <section class="moveis-planejados">
+    <article class="conteudo">
+      <h2>Móveis Planejados</h2>
+       <p>
+        A fabricação de móveis planejados começa com um projeto personalizado, feito conforme as medidas e necessidades do cliente, de forma inteligente e funcional. Após a aprovação, as peças são produzidas
+        em marcenaria própria, com cortes precisos e acabamento sob medida, 
+        garantindo encaixe perfeito na instalação.
+       </p>
+        <a href="#" class="btn-solicitar">SOLICITE SEU ORÇAMENTO</a>
+    </article>
+    
+         <div class="imagem-destaque">
+        <img src="img/index-moveis.png" alt="Móveis Planejados"/>
+        </div>
+   </section>
+
+   <section class="projeto-interiores">
+    <div class="container">
+      <h3>PROJETO DE INTERIORES</h3>
+      <p>Conheça nossos projetos e inspire-se.</p>
+    </div>
+    </section>
+
+    <section class="assessoria-em-obras">
+  <div class="grid-obras">
+    <div class="imagem">
+      <img src="img/index-assessoria.png" alt="Assessoria em Obras">
+    </div>
+    <div class="conteudo">
+      <h4>ASSESSORIA EM OBRAS</h4>
+      <p>
+        A assessoria em obras oferece suporte completo, com
+        orientação técnica desde o início do projeto até sua
+        execução, incluindo orçamentos, planejamento de
+        compras e escolha de fornecedores. Atuamos na
+        mediação entre cliente e profissionais, garantindo
+        comunicação eficiente, gestão do cronograma e 
+        acompanhamento contínuo para que tudo ocorra
+        conforme o planejado.
+      </p>
+        <a href="#" class="btn-solicitar">SOLICITE SEU ORÇAMENTO</a>
+    </div>
+  </div>
+</section>
+
+    <section class="diferenciais">
+      <div class="cards">
+
+    <div class="card">
+      <img src="img/clock.png" alt="Ícone Relógio" />
+      <p>+ 15 anos de</p>
+      <p>experiência</p>
+    </div>
+
+    <div class="card">
+      <img src="img/regua.png" alt="Ícone Régua" />
+      <p>Projetos</p>
+      <p>personalizados</p>
+    </div>
+
+    <div class="card">
+      <img src="img/entrega.png" alt="Ícone Entrega" />
+      <p>Entrega</p>
+      <p>rápida</p>
+    </div>
+
+    <div class="card">
+      <img src="img/suporte.png" alt="Ícone Suporte" />
+      <p>Suporte em</p>
+      <p>todas as etapas</p>
+    </div>
+  </div>
+</section>
+
+<section class="contato">
+  <div class="form-conteudo">
+    <div class="info-contato">
+      <h5>TRANSFORME SEU AMBIENTE COM
+        <span> A ESPAÇO E ARTE </span></h5>
+      <p>
+        Para receber um orçamento, envie a planta do ambiente
+        pelos nossos canais de contato ou agende uma visita gratuita.
+      </p>
+      <p>
+        Caso deseje, nossa equipe fará a medição no local
+        e poderá desenvolver um projeto sob medida, conforme suas necessidades.
+      </p>
+    </div>
+
+
+    <form class="formulario">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
+
+
+      <label for="telefone">Telefone</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
+
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" rows="7" placeholder="Descreva sua necessidade"></textarea>
+
+
+      <label for="origem">Como conheceu a empresa?</label>
+      <select id="origem" name="origem">
+        <option value="">Selecione</option>
+        <option value="instagram">Instagram</option>
+        <option value="google">Google</option>
+        <option value="indicação">Indicação</option>
+        <option value="outro">Outro</option>
+      </select>
+      <button type="submit">ENVIAR</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Logo e CNPJ -->
+    <div class="footer-section logo-section">
+      <a href="index.html" aria-label="Voltar para a página inicial">
+        <img src="img/LOGO.png" alt="Logo Espaço e Arte - Marcenaria Moderna">
+      </a>
+      <p class="cnpj">CNPJ 20.460.266/0001-24</p>
+    </div>
+
+    <!-- Informações de Contato -->
+    <div class="footer-contatos">
+      <div class="contato-item">
+        <img src="img/whatsapp.png" alt="Ícone WhatsApp">
+        <span>(63) 98153-3434</span>
+      </div>
+      <div class="contato-item">
+        <img src="img/instagram.png" alt="Ícone Instagram">
+        <span>@espaco.e.arte</span>
+      </div>
+      <div class="contato-item">
+        <img src="img/email.png" alt="Ícone E-mail">
+        <span>espacoartemoveisdesign@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- Endereço -->
+    <div class="footer-enderecos">
+      <div class="endereco-item">
+        <img src="img/pin.png" alt="Ícone de localização">
+        <span>Quadra 1506 Sul, Av. LO 33, Lote 37</span>
+      </div>
+      <div class="endereco-item">
+        <span>Plano Diretor Sul, Palmas - TO</span>
+      </div>
+      <div class="endereco-item">
+        <span>CEP: 77.027-060</span>
+      </div>
+      <div class="endereco-item">
+        <a href="#" class="trabalhe-link">Trabalhe Conosco</a>
+      </div>
+    </div>
+    
+  </div>
+
+  <!-- Créditos -->
+  <div class="footer-credits">
+    <p>&copy; Espaço e Arte. Todos os direitos reservados.</p>
+    <p>Desenvolvido por Letícia Lorrane | Letícia Marques</p>
+  </div>
+</footer>
+
+
+</body>
+</html>
