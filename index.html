@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <meta name="author" content="Leticia Lorrane e Letícia Marques" />
         <meta name="keywords" content="Móveis planejados, projeto, interiores, design, arquitetura, arquiteta, reforma, obras, móveis sob medida, marcenaria, marceneiro, palmas, assessoria em obras" />
-        <meta name="description" content="“Especialistas em móveis planejados e design de interiores para residências e ambientes corporativos. Estilo, otimização de espaço e qualidade." />
+        <meta name="description" content="Especialistas em móveis planejados e design de interiores para residências e ambientes corporativos. Estilo, otimização de espaço e qualidade." />
         <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     </head>
 
@@ -13,19 +13,21 @@
 
   <!-- Menu -->
   <header>
-    <a class="logo" href="/index.html">
-    <img src="assets/img/Icones/LOGO.png" alt="Logotipo Espaço e Arte">
-    </a>
+    <div id="header-container">
+      <a class="logo" href="index.html">
+        <img src="assets/img/Icones/LOGO.png" alt="Logotipo Espaço e Arte">
+      </a>
 
-    <nav class="menu">
-      <ul>
-        <li><a href="/pages/moveis.html">MÓVEIS PLANEJADOS</a></li>
-        <li><a href="/pages/projetos.html">PROJETO DE INTERIORES</a></li>
-        <li><a href="/pages/assessoria.html">ASSESSORIA EM OBRAS</a></li>
-        <li><a href="#contato">CONTATO</a></li>
-        <li><a href="/pages/sobre.html">SOBRE NÓS</a></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul>
+          <li><a class="hover-effect" href="pages/moveis.html">MÓVEIS PLANEJADOS</a></li>
+          <li><a class="hover-effect" href="pages/projetos.html">PROJETO DE INTERIORES</a></li>
+          <li><a class="hover-effect" href="pages/assessoria.html">ASSESSORIA EM OBRAS</a></li>
+          <li><a class="hover-effect" href="#contato">CONTATO</a></li>
+          <li><a class="hover-effect" href="pages/sobre.html">SOBRE NÓS</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <!-- Fim Menu -->
 
@@ -42,19 +44,25 @@
   </section>
   <!-- Fim Banner -->
 
+  <!-- Introdução -->
+  <section class="frase">
+    <h2>Soluções completas para transformar seu espaço</h2>
+  </section>
+  <!-- Fim Introdução -->
+
   <!-- Section Móveis Planejados -->
-  <section class="moveis-planejados">
-    <article class="conteudo">
-      <h1>Móveis Planejados</h1>
+  <section class="conteudo">
+    <article class="conteudo-esquerda">
+      <h1>MÓVEIS PLANEJADOS</h1>
        <p>
         A fabricação de móveis planejados começa com um projeto personalizado, feito conforme as medidas e necessidades do cliente, de forma inteligente e funcional. Após a aprovação, as peças são produzidas
         em marcenaria própria, com cortes precisos e acabamento sob medida, 
         garantindo encaixe perfeito na instalação.
        </p>
-        <a href="https://wa.me/5563981533434" class="btn-solicitar" target="_blank" >SOLICITE SEU ORÇAMENTO</a>
+        <a href="https://wa.me/5563981533434" class="btn-orcamento" target="_blank" > <span>SOLICITE SEU ORÇAMENTO</span></a>
     </article>
     
-    <img class="imagem-destaque" src="assets/img/1.Index/index-moveis.png" alt="Móveis Planejados"/>
+    <img class="imagem-direita" src="assets/img/1.Index/index-moveis.png" alt="Móveis Planejados"/>
   </section>
   <!-- Fim Móveis Planejados -->
 
@@ -110,10 +118,9 @@
   <!-- Fim Projeto de Interiores -->
 
   <!-- Section Assessoria em Obras -->
-  <section id="assessoria-em-obras">
-    <div class="grid-obras">
-      <img class="imagem" src="assets/img/1.Index/index-assessoria.png" alt="Assessoria em Obras">
-      <article class="conteudo">
+  <section class="conteudo">
+      <img class="imagem-esquerda" src="assets/img/1.Index/index-assessoria.png" alt="Assessoria em Obras">
+      <article class="conteudo-direita">
         <h1>ASSESSORIA EM OBRAS</h1>
         <p>
           A assessoria em obras oferece suporte completo, com
@@ -125,9 +132,8 @@
           acompanhamento contínuo para que tudo ocorra
           conforme o planejado.
         </p>
-        <a href="https://wa.me/5563981533434" class="btn-solicitar" target="_blank" >SOLICITE SEU ORÇAMENTO</a>
+        <a href="https://wa.me/5563981533434" class="btn-orcamento" target="_blank"><span>SOLICITE SEU ORÇAMENTO</span></a>
       </article>
-    </div>
   </section>
   <!-- Fim Assessoria em Obras -->
 
@@ -158,9 +164,9 @@
 <!-- Fim Diferenciais -->
 
   <!-- Section Contato -->
-  <section id="contato" class="contato">
-    <div class="form-conteudo">
-      <div class="info-contato">
+  <section id="contato" class="conteudo">
+
+      <div class="conteudo-esquerda">
         <h1>TRANSFORME SEU AMBIENTE COM A ESPAÇO E ARTE </h1>
         <p>
           Para receber um orçamento, envie a planta do ambiente
@@ -192,17 +198,17 @@
         </select>
         <button type="submit">ENVIAR</button>
       </form>
-    </div>
+
   </section>
   <!-- Fim Contato -->
 
   <!-- Rodapé -->
-  <footer class="footer">
+  <footer>
     <div class="footer-container">
       
       <!-- Logo e CNPJ -->
-      <div class="footer-section logo-section">
-        <a href="index.html" aria-label="Voltar para a página inicial">
+      <div class="logo-cnpj">
+        <a href="index.html" class="logo" aria-label="Voltar para a página inicial">
           <img src="assets/img/Icones/LOGO.png" alt="Logo Espaço e Arte - Marcenaria Moderna">
         </a>
         <p class="cnpj">CNPJ 20.460.266/0001-24</p>
@@ -211,40 +217,34 @@
       <!-- Informações de Contato -->
       <div class="footer-contatos">
         <div class="contato-item">
-          <img src="assets/img/Icones/whatsapp.png" alt="Ícone WhatsApp">
-          <span>(63) 98153-3434</span>
+          <a href="https://wa.me/5563981533434"><img src="assets/img/Icones/whatsapp.png" alt="Ícone WhatsApp"></a>
+          <a href="https://wa.me/5563981533434" target="_blank">(63) 98153-3434</a>
         </div>
         <div class="contato-item">
-          <img src="assets/img/Icones/instagram.png" alt="Ícone Instagram">
-          <span>@espaco.e.arte</span>
+          <a href="https://instagram.com/espaco.e.arte"><img src="assets/img/Icones/instagram.png" alt="Ícone Instagram"></a>
+          <a href="https://instagram.com/espaco.e.arte" target="_blank">@espaco.e.arte</a>
         </div>
         <div class="contato-item">
-          <img src="assets/img/Icones/email.png" alt="Ícone E-mail">
-          <span>espacoartemoveisdesign@gmail.com</span>
+          <a href="mailto:espacoeartemoveisdesign@gmail.com"><img src="assets/img/Icones/email.png" alt="Ícone E-mail"></a>
+          <a href="mailto:espacoeartemoveisdesign@gmail.com">espacoeartemoveisdesign@gmail.com</a>
         </div>
       </div>
 
       <!-- Endereço -->
       <div class="footer-enderecos">
-        <div class="endereco-item">
           <img src="assets/img/Icones/pin.png" alt="Ícone de localização">
-          <span>Quadra 1506 Sul, Av. LO 33, Lote 37</span>
-        </div>
-        <div class="endereco-item">
-          <span>Plano Diretor Sul, Palmas - TO</span>
-        </div>
-        <div class="endereco-item">
-          <span>CEP: 77.027-060</span>
-        </div>
-        <div class="endereco-item">
-          <a href="#" class="trabalhe-link">Trabalhe Conosco</a>
-        </div>
+
+          <div id="endereco">
+            <span>Quadra 1506 Sul, Av. LO 33, Lote 37, Plano Diretor Sul, Palmas - TO</span>
+            <span>CEP: 77.027-060</span>
+            <a href="pages/trabalhe.html" class="trabalhe-link"><span class="hover-effect ">Trabalhe Conosco</span></a>
+          </div>
       </div>
       
     </div>
 
     <!-- Créditos -->
-    <div class="footer-credits">
+    <div id="footer-credits">
       <p>&copy; Espaço e Arte. Todos os direitos reservados. Desenvolvido por Letícia Lorrane | Letícia Marques</p>
     </div>
   </footer>

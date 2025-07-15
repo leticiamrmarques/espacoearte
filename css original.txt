@@ -1,0 +1,825 @@
+
+.btn-solicitar{
+  background-color: #69755B;
+  color: #fff;
+  padding: 14px 28px;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 17px;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.btn-solicitar:hover {
+  background-color: #566147;
+}
+
+header {
+  background-color: #c4cfb8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: 155px;
+}
+
+.logo img {
+  height: 100px; 
+  margin: 0;
+}
+
+.logo span {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.logo small {
+  font-weight: normal;
+  font-size: 0.75em;
+  
+}
+
+.logo a {
+  display: inline-block; /* animar */
+  transition: transform 0.3s ease; /*duração*/
+  cursor: pointer;
+}
+
+.logo a:hover {
+  transform: scale(1.1); /*ajusta o tamanho da logo quando o mouse passa sobre o link*/
+}
+
+.logo a:active {
+  transform: scale(1.2); /*aumenta o tamanho da logo quando o link está sendo clicado*/
+}
+
+.menu{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  margin-top: 60px;
+  padding-left: 60px;
+}
+
+nav a,
+.trabalhe-link:hover{
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+/* Linha animada no menu */
+nav a,
+.trabalhe-link {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+nav a::after,
+.trabalhe-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 1.2px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after,
+.trabalhe-link:hover::after {
+  transform: scaleX(1);
+}
+
+nav a:hover,
+.trabalhe-link:hover {
+  color: black;
+}
+
+/* SECTION BANNER SLIDER */
+.banner-slider{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 120px;
+}
+
+.banner-slider img{
+    width: 100%;
+}
+
+.banner-slider .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.banner-slider .slide.show{
+    z-index: 1;
+    opacity: 1;
+    position: relative;
+}
+
+.banner-slider ul{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.banner-slider ul li{
+    list-style-type: none;
+}
+
+.banner-slider .circulo{
+    color: #bcb8b2;
+    font-size: 1.3rem;
+}
+
+.banner-slider .circulo.active{
+    color: #ffff;
+}
+
+.frase {
+  text-align: center;
+  padding: 50px;
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  position: relative;
+  background-color:  #c4cfb8;
+}
+
+.frase::before,
+.frase::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 90%;
+  height: 0.5px; 
+  background: black;
+  z-index: 0;
+}
+
+.frase::before{
+  left: 10%;
+}
+
+.frase::after {
+  right: 10%;
+}
+
+.frase span {
+  position: relative;
+  background-color: #c4cfb8;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+section.moveis-planejados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.moveis-planejados .conteudo {
+  padding: 60px 120px 60px 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.moveis-planejados .imagem-destaque {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.moveis-planejados .imagem-destaque img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  display: block;
+}
+
+.conteudo h2 {
+  font-family: "Lora", serif;
+  font-size: 32px;
+  font-weight: 540;
+  color: #000;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.conteudo p {
+  font-size: 16px;
+  line-height: 2.5;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 500px;
+  text-align: justify;
+  letter-spacing: 0.9px;
+}
+
+/* SECTION PROJETO INTERIORES */
+
+.projeto-interiores{
+    background-color: #C4CFB8;
+    height: 788.4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    
+}
+
+.projeto-interiores-container{
+    width: 75%;
+    margin: 80px 0 60px 0;
+}
+
+.projeto-interiores-carousel{
+    width: 75%;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.projeto-interiores-carousel-imgs{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.projeto-interiores-carousel-imgs img{
+    height: 410px;   
+}
+
+.img-wrapper{
+    display: inline-block;
+    position: relative;
+}
+
+.img-wrapper::after{
+    content: "";
+    position: absolute;
+    color: #ffffff;
+    background: #00000080;
+    padding: 10px 10px;
+    border-radius: 3px 0px 3px;
+    font-weight: bold;
+    top: 0px;
+    left: 0px;
+
+    font-family: "Poppins", serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.img-wrapper.projeto::after {
+    content: "Projeto";
+}
+  
+.img-wrapper.execucao::after {
+    content: "Execução";
+}
+
+.projeto-interiores-carousel-btns{  
+    width: 82%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 52.5%;
+}
+
+.projeto-interiores-carousel-btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.projeto-interiores-carousel-circle-navigation ul{
+    display: flex;
+    width: 100px;
+    height: 30px;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 40px;
+
+}
+
+.projeto-interiores-carousel-circle-navigation ul li{
+    list-style-type: none;
+}
+
+.projeto-interiores-carousel-circle-navigation .circulo{
+    color: #28282880;
+    font-size: 1rem;
+}
+
+.projeto-interiores-carousel-circle-navigation .circulo.active{
+    color: #282828;
+}
+
+.carrossel-container {
+  overflow: hidden;
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*FALTA AS BOLINHAS DO PROJETO DE INTERIORES*/
+
+.assessoria-em-obras{
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.grid-obras {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  gap: 90px;
+}
+
+.grid-obras .imagem {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+}
+.grid-obras .imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block;
+}
+.grid-obras .conteudo {
+  flex: 1;
+  background-color: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.assessoria-em-obras h4{
+  font-family: "Lora", serif;
+  font-size: 32px;
+  font-weight: 540;
+  color: #000;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/*card diferenciais da empresa*/
+#diferenciais {
+  background-color: #c4cfb8;
+  padding: 60px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #fff;
+  padding: 45px;
+  border-radius: 12px;
+  width: 212px;
+  text-align: center;
+}
+
+.card:hover,
+.card:focus,
+.card:active {
+  transform: translateY(-5px);
+
+  /* Sombra aparece só ao interagir */
+  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 43px;
+  height: 43px;
+  position: relative;
+  top: -05px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.0;
+  color: #000;
+  margin-top: 12px;
+  white-space: nowrap;
+}
+
+/* FORM */
+.contato {
+  padding: 60px 20px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  height: 700px;
+  align-items: center;     /* centraliza horizontalmente */
+  justify-content: center; 
+  padding-top: 50px;      /* move tudo mais para baixo */
+  padding-bottom: 100px;   
+}
+
+.form-conteudo {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-contato {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-contato h5 {
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Lora', serif;
+  margin-bottom: 20px;
+}
+
+.info-contato h5 span {
+  display: block;         /* força a quebra de linha */
+  font-size: 25px;        
+  font-weight: bold;
+  margin-top: 5px;        /* espaço entre as linhas */      
+}
+
+.info-contato p {
+  margin-bottom: 70px;
+  line-height: 3.6;
+  word-spacing: 5px;
+  text-align: justify;
+
+}
+
+.formulario {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+.formulario label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+  padding: 19px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.formulario textarea {
+  resize: vertical;
+}
+
+.formulario button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #6B6E55;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario button:hover {
+  background-color: #555844;
+}
+
+.info-contato p {
+  margin-bottom: 50px !important;
+  line-height: 1.6 !important;
+}
+
+/*página móveis planejados*/
+.moveis-planejados-imagem {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.moveis-planejados-imagem img {
+  width: 100%;
+  height: auto;
+  display: flex;
+  object-fit: cover;
+  filter: brightness(0.45);
+}
+
+.texto-banner{
+  position: absolute;
+  top: 50%;
+  left: 195px;
+  text-align: left;
+  font-family: "Lora", serif;
+  color: white;
+  font-size: 65px;
+  font-weight: 450;
+  letter-spacing: 1.6;
+  line-height: 1.2;
+  margin-top: -75px;
+}
+
+.texto-banner span{
+  display: flex;
+}
+
+.qualidade-durabilidade {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.qualidade-durabilidade .conteudo {
+  background-color: #c4cfb8;  
+  font-family: "Lora", serif;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.qualidade-durabilidade h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #2d2d2d;
+  line-height: 1.4;
+  text-transform: uppercase;
+  margin-left: 90px;
+}
+
+.lista-beneficios {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  line-height: 2;
+  color: #2d2d2d;
+  margin: 0;
+  line-height: 2.9;
+  margin-left: 90px;
+}
+
+.qualidade-imagem {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.qualidade-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* rodape*/
+
+.footer {
+  background-color: #c4cfb8;
+  padding: 40px 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* === Logo e CNPJ === */
+
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 160px;
+  flex: 1;
+  min-width: 240px;
+}
+
+.logo-section img {
+  width: 180px;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.cnpj {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* === Contatos === */
+
+.footer-contatos {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-left: -15px; /* traz levemente para a esquerda */
+  flex: 1;
+  min-width: 240px;
+}
+
+.contato-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-left: -25px;
+}
+
+.contato-item img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* === Endereços === */
+
+.footer-enderecos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-width: 240px;
+}
+
+.endereco-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.endereco-item img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* === Créditos === */
+
+.footer-credits {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #555;
+}
+
+.footer-credits p {
+  margin: 4px 0;
+}
+
+/*pagina moveis planejados-moveis sob medida*/
+.moveis-sob-medida {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.moveis-sob-medida .container { 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  gap: 90px;
+  align-items: center; 
+}
+
+.moveis-sob-medida-conteudo {
+  background-color: #fff;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2.0;
+  text-align: justify;
+}
+
+.moveis-sob-medida-imagem { 
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.moveis-sob-medida-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+  display: block ;
+}
+
+.moveis-sob-medida h1 {
+  font-family: "Lora", serif;
+  font-size: 32px;
+  font-weight: 540;
+  color: #000;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.moveis-sob-medida p{
+  font-size: 16px;
+  line-height: 2.0;
+  color: #333;
+  margin-bottom: 40px;
+  max-width: 500px;
+  text-align: justify;
+  letter-spacing: 0.9px;
+}
+
+.moveis-sob-medida span{
+  font-weight: bold;
+}
+
+
+
