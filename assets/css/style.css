@@ -137,10 +137,10 @@ nav a:hover, .trabalhe-link:hover {
   z-index: 0;
   width: 100%;
   height: auto;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
-.banner-slider .slide.show {
+.banner-slider .slide.show{
   z-index: 1;
   opacity: 1;
   position: relative;
@@ -178,7 +178,7 @@ nav a:hover, .trabalhe-link:hover {
   background-color: #c4cfb8;
   position: relative;
   padding: 60px;
-  margin-top: -4px;
+  margin-top: -3.5px;
 }
 
 .frase::before,
@@ -578,21 +578,15 @@ footer{
 .banner-container {
   position: relative;
   width: 100%;
-  height: 426px;
-  overflow: hidden;
+  height: 566px;
 }
 
-.banner-container img {
-  position: absolute;
-  top: 0;
-  left: 0;
+.banner-container img { 
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: 0;
 }
 
-.banner-container::before {
+.banner-container::after, .portfolio-card::after {
   content: "";
   position: absolute;
   top: 0;
@@ -602,28 +596,36 @@ footer{
   background-color: black;
   opacity: 0.5;
   z-index: 1;
-  height: 422px;
+  height: 100%;
+  transition: opacity 0.5s ease;
 }
 
-.banner-container span{
+.banner-container::before{
+  content: "MÓVEIS \APLANEJADOS";
+  white-space: pre-line;
+  color: white;
   font-family: Lora, serif;
   font-size: 60px;
-  color: white;
   letter-spacing: 2px;
   position: absolute;
   top: 50%;
   margin-left: 12.5%;
   transform: translateY(-50%);
   z-index: 2; 
+  text-shadow: #000 4px 4px 6px ;
+}
+
+.frase.paginas{
+  margin-top: 0.2px;
 }
 /*Fim Banner*/
 
 /*Seção Qualidade*/
-#qualidade h1{
+#qualidade h1, #incluso h1, #porque h1{
   margin-bottom: 30px;
 }
 
-.conteudo-esquerda li{
+.conteudo-esquerda li, .conteudo-direita li{
   font: 14px "Poppins";
   text-align: justify;
   line-height: 25px;
@@ -650,21 +652,37 @@ footer{
   position: relative;
 }
 
+#trabalhos-realizados h1{
+  margin-bottom: 70px;
+}
+
 .trabalhos-realizados-carousel {
-  width: 75%;
-  height: 565px;
-  margin: 80px 0 60px 0;
   display: flex;
-  flex-direction: column;
+  width: 75%;
+  height: 570px;
   overflow: hidden;
-  justify-content: center;
-  align-items: center;
+  position: relative;
 }
 
 .trabalhos-realizados-carousel-imgs {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.trabalhos-realizados-carousel-imgs.show{
+  opacity: 1;
+  z-index: 1;
+}
+
+#navegacao-trabalhos ul{
+  width: 250px;
 }
 
 .trabalhos-realizados-carousel-imgs img{
@@ -672,8 +690,194 @@ footer{
   height: 565px;
 }
 /* Fim Trabalhos realizados */
-
 /* ----- Fim Página Móveis Planejados ------*/
+
+/* ----- Página Projetos ------*/
+
+/* Banner*/
+.banner-container.container-projetos::before{
+  content: "PROJETO DE \AINTERIORES";
+  white-space: pre-line;
+}
+/* Fim Banner*/
+
+/*Imagens Etapas*/
+#etapas-img {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+
+.imagem-esquerda.img {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+.imagem-esquerda.show{
+  opacity: 1;
+  z-index: 1;
+}
+/* Fim Imagens Etapas*/
+
+/* Accordion Etapas - Bootstrap*/
+.accordion, .accordion h2{
+  font: 14px "Poppins";
+  text-align: justify;
+  line-height: 44px;
+  color: #282828;
+  overflow: hidden;
+  height: 450px;
+  border: purple solid 2px;
+}
+/* Fim Accordion Etapas - Bootstrap*/
+
+/* Section Portfólio*/
+#portfolio h1{
+  text-align:  center;
+  margin: 80px 0 65px 0;
+}
+
+#porfolio-container{
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3,0fr);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.portfolio-card{
+  width: 598px;
+  height: 338px;
+  margin: 15px 15px;
+  position: relative;
+  
+}
+
+.portfolio-card img{
+  width: 100%;
+  height: 100%;
+}
+
+.portfolio-card::before{
+  content: "";
+  white-space: pre-line;
+  color: white;
+  font-family: Lora, serif;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 2; 
+  text-shadow: #000 4px 4px 6px;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-card.cozinha::before{
+  content: "COZINHA";  
+}
+.portfolio-card.quarto::before{
+  content: "QUARTO";
+}
+.portfolio-card.closet::before{
+  content: "CLOSET";
+}
+.portfolio-card.sala::before{
+  content: "SALA";
+}
+.portfolio-card.banheiro::before{
+  content: "BANHEIRO";
+}
+.portfolio-card.escritorio::before{
+  content: "ESCRITÓRIO";
+}
+.portfolio-card.lazer::before{
+  content: "LAZER";
+}
+.portfolio-card.corporativo::before{
+  content: "CORPORATIVO";
+}
+.portfolio-card.comercial::before{
+  content: "COMERCIAL";
+}
+
+.portfolio-card:hover::before {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.portfolio-card:hover::after {
+  opacity: 0.75;
+}
+/* Fim Portfólio*/
+/* ----- Fim Página Projetos ------*/
+
+/* ----- Página Assessoria ------*/
+
+/*Banner*/
+.banner-container.container-obras::before{
+  content: "ASSESSORIA \A EM OBRAS";
+  white-space: pre-line;
+}
+
+.frase-assessoria h2{
+  width: 820px;
+  padding: 0 20px;
+}
+/*Fim Banner*/
+
+/*Frase e Botão*/
+.frase-botao{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+.frase-botao h2{
+  width: auto;
+  position: relative;
+  bottom: 25px;
+  padding-top: 30px;
+}
+
+#botao-container{
+  width: 450px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c4cfb8;
+  position: relative;
+  bottom: 10px;
+  z-index: 4;
+}
+
+.frase-botao::before,
+.frase-botao::after {
+  content: "";
+  position: absolute;
+  top: 58%;
+  width: 90%;
+  height: 0.5px;
+  background: #282828;
+}
+/* Fim Frase e Botão*/
+
+
+
+/* ----- Fim Página Assessoria ------*/
+
+
 
 
 
