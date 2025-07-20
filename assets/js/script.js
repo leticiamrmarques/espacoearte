@@ -51,3 +51,7 @@ function resetInterval() {
 // Inicia o primeiro slide e o timer
 showSlide(0);
 startAutoSlide();
+
+
+
+
