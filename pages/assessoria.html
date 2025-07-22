@@ -13,7 +13,7 @@
   <body>
 
     <!-- Menu -->
-    <header>
+      <header>
       <div id="header-container">
         <a class="logo" href="../index.html">
           <img src="../assets/img/Icones/LOGO.png" alt="Logotipo Espaço e Arte">
@@ -21,16 +21,33 @@
 
         <nav>
           <ul>
-            <li><a class="hover-effect" href="moveis.html">MÓVEIS PLANEJADOS</a></li>
-            <li><a class="hover-effect" href="projetos.html">PROJETO DE INTERIORES</a></li>
+            <li class="dropdown">
+              <a class="hover-effect menu-drop-moveis" href="moveis.html">MÓVEIS PLANEJADOS</a>
+              <div class="opcao-dropdown menu-drop-moveis">
+                <a href="moveis.html#trabalhos-realizados">TRABALHOS REALIZADOS</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a class="hover-effect menu-drop-projetos" href="projetos.html">PROJETO DE INTERIORES</a>
+              <div class="opcao-dropdown menu-drop-projetos">
+                <a href="projetos.html#portfolio">PORTFÓLIO</a>
+              </div>
+            </li>
             <li><a class="hover-effect" href="assessoria.html">ASSESSORIA EM OBRAS</a></li>
             <li><a class="hover-effect" href="#contato">CONTATO</a></li>
-            <li><a class="hover-effect" href="sobre.html">SOBRE NÓS</a></li>
+            <li class="dropdown">
+              <a class="hover-effect menu-drop-sobre" href="sobre.html">SOBRE NÓS</a>
+              <div class="opcao-dropdown menu-drop-sobre">
+                <a href="sobre.html#localizacao">LOCALIZAÇÃO</a>
+              </div>
+              
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <!-- Fim Menu -->
+
 
     <!-- Banner -->
     <section class="banner-container container-obras">
@@ -190,7 +207,7 @@
           <div id="endereco">
             <span>Quadra 1506 Sul, Av. LO 33, Lote 37, Plano Diretor Sul, Palmas - TO</span>
             <span>CEP: 77.027-060</span>
-            <a href="pages/trabalhe.html" class="trabalhe-link">
+            <a href="trabalhe.html" class="trabalhe-link">
             <span class="hover-effect ">Trabalhe Conosco</span></a>
           </div>
         </div>

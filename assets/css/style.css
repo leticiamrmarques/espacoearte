@@ -35,7 +35,7 @@ p {
   color: #282828;
 }
 
-/*Menu*/
+/* Menu */
 header {
   background-color: #c4cfb8;
   width: 100%;
@@ -61,13 +61,11 @@ header {
 }
 
 .logo img:hover {
-  scale: 1.05; /*ajusta o tamanho da logo quando o mouse passa sobre o link*/
+  scale: 1.05; /* Aumenta a logo no hover */
 }
 
 .logo a:active {
-  transform: scale(
-    1.05
-  ); /*aumenta o tamanho da logo quando o link está sendo clicado*/
+  transform: scale(1.05); /* Aumenta a logo ao clicar */
 }
 
 nav {
@@ -81,19 +79,93 @@ nav ul {
   gap: 50px;
 }
 
-/* Definindo escala para transição hover */
-nav a, .trabalhe-link {
+/* Links com efeito de escala e linha */
+nav a, .trabalhe-link, .h1-link {
   position: relative;
   text-decoration: none;
   transform: scale(1);
   transition: scale 0.5s ease;
 }
 
-nav a:hover, .trabalhe-link:hover {
+/* Efeito hover para links normais (sem dropdown) */
+nav ul li:not(.dropdown) a.hover-effect:hover, .trabalhe-link:hover {
   scale: 1.05;
 }
 
-/* Linha animada no menu */
+nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::after{
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Efeito mantido para dropdown quando o mouse está no submenu */
+.dropdown:hover .hover-effect {
+  scale: 1.05;
+}
+
+.dropdown:hover .hover-effect::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Estilo do dropdown */
+.dropdown {
+  position: relative;
+}
+
+.opcao-dropdown a {
+  position: relative;
+  margin-left: 5px;
+  font-size: 12px;
+  bottom: 3px;
+}
+
+.opcao-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1.5s ease;
+  position: absolute;
+  border-radius: 3px;
+  background-color: #abb896;
+  border-top: none;
+  border-right: none;
+  margin-top: 3.5px;
+  height: 35px;
+  padding: 10px 0 0 0;
+  margin-left: -4px;
+  /* mantenha seu width conforme já tem */
+}
+
+.menu-drop-moveis{
+  width: 152px;
+}
+
+.menu-drop-moveis.opcao-dropdown{
+  width: 160px;
+}
+
+.menu-drop-projetos{
+  width: 168px;
+}
+
+.menu-drop-projetos.opcao-dropdown{
+  width: 176px;
+}
+
+.menu-drop-sobre{
+  width: 88px;
+}
+
+.menu-drop-sobre.opcao-dropdown{
+  width: 94px;
+}
+
+/* Mostra o dropdown ao passar o mouse */
+.dropdown:hover .opcao-dropdown {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* Efeito da linha animada */
 .hover-effect {
   display: inline-block;
   position: relative;
@@ -102,7 +174,7 @@ nav a:hover, .trabalhe-link:hover {
 .hover-effect::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -2px;
   left: 50%;
   width: 100%;
   height: 1px;
@@ -111,11 +183,8 @@ nav a:hover, .trabalhe-link:hover {
   transform: translateX(-50%) scaleX(0);
   transition: transform 0.5s ease;
 }
+/* Fim Menu */
 
-.hover-effect:hover::after {
-  transform: translateX(-50%) scaleX(1);
-}
-/* Fim Menu*/
 
 /* ----- Index ------*/
 
@@ -140,7 +209,7 @@ nav a:hover, .trabalhe-link:hover {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
 }
-.banner-slider .slide.show{
+.banner-slider .slide.show {
   z-index: 1;
   opacity: 1;
   position: relative;
@@ -235,6 +304,9 @@ nav a:hover, .trabalhe-link:hover {
   height: 100%;
   overflow: hidden;
 }
+
+
+
 /* Fim Móveis Planejados*/
 
 /* Botão orçamento*/
@@ -279,7 +351,8 @@ nav a:hover, .trabalhe-link:hover {
   position: relative;
 }
 
-.projeto-interiores-container, #depoimentos-container {
+.projeto-interiores-container,
+#depoimentos-container {
   width: 75%;
   margin: 80px 0 60px 0;
 }
@@ -296,8 +369,14 @@ nav a:hover, .trabalhe-link:hover {
 
 .projeto-interiores-carousel-imgs {
   width: 100%;
-  display: flex;
+  display: none;
+  opacity: 0;
   justify-content: space-between;
+}
+
+.projeto-interiores-carousel-imgs.projeto-ativo{
+  display: flex;
+  opacity: 1;
 }
 
 .projeto-interiores-carousel-imgs img {
@@ -361,12 +440,12 @@ nav a:hover, .trabalhe-link:hover {
   list-style-type: none;
 }
 
-.carousel-circle-navigation .circulo {
+.circulo-projeto, .circulo-moveis {
   color: #28282880;
   font-size: 1rem;
 }
 
-.carousel-circle-navigation .circulo.active {
+.circulo-projeto.active, .circulo-moveis.active {
   color: #282828;
 }
 
@@ -410,7 +489,7 @@ nav a:hover, .trabalhe-link:hover {
   background-color: #fff;
   width: 200px;
   height: 200px;
-  border-radius: 10px;  
+  border-radius: 10px;
   text-align: center;
   align-content: center;
   padding: 30px;
@@ -437,18 +516,18 @@ nav a:hover, .trabalhe-link:hover {
 /* ----- Fim Index ------*/
 
 /* Contato*/
-#contato p{
+#contato p {
   margin: 0 0 20px 0;
 }
 
-#contato h1{
+#contato h1 {
   margin-bottom: 30px;
 }
 /* Fim Contato*/
 
 /* Formulário */
 .formulario {
-  width: 650px ;
+  width: 650px;
   margin: 100px 25% 100px auto;
   display: flex;
   flex-direction: column;
@@ -456,7 +535,9 @@ nav a:hover, .trabalhe-link:hover {
   font-size: 16px;
 }
 
-.formulario input, .formulario textarea, .formulario select {
+.formulario input,
+.formulario textarea,
+.formulario select {
   margin: 2px 0 30px 0;
   padding: 10px;
   border: 1px solid #000;
@@ -466,7 +547,9 @@ nav a:hover, .trabalhe-link:hover {
   font-weight: 300;
 }
 
-input::placeholder, textarea::placeholder, select{
+input::placeholder,
+textarea::placeholder,
+select {
   color: #3c3c3c;
 }
 
@@ -475,7 +558,7 @@ input::placeholder, textarea::placeholder, select{
 }
 
 .formulario button {
-  background-color: #6B6E55;
+  background-color: #6b6e55;
   height: 44px;
   width: 650px;
   color: white;
@@ -490,20 +573,20 @@ input::placeholder, textarea::placeholder, select{
   cursor: pointer;
 }
 
-.formulario button:hover{
+.formulario button:hover {
   background-color: #889561;
 }
 
 /* Fim Formulário */
 
 /* Rodapé*/
-footer{
+footer {
   background-color: #c4cfb8;
   height: 270px;
   justify-items: center;
 }
 
-.footer-container{
+.footer-container {
   width: 100%;
   max-width: 75%;
   display: flex;
@@ -513,8 +596,8 @@ footer{
   align-items: center;
 }
 
-.logo-cnpj{
- justify-items: center;
+.logo-cnpj {
+  justify-items: center;
 }
 
 /*Contatos*/
@@ -524,7 +607,8 @@ footer{
   gap: 12px;
 }
 
-.footer-contatos a, .footer-enderecos span{
+.footer-contatos a,
+.footer-enderecos span {
   font: 14px "Poppins";
   text-align: justify;
   color: #282828;
@@ -539,7 +623,8 @@ footer{
   margin: 2px 0;
 }
 
-.contato-item img, .footer-enderecos img{
+.contato-item img,
+.footer-enderecos img {
   width: 26px;
   height: 26px;
 }
@@ -551,20 +636,20 @@ footer{
   gap: 16px;
 }
 
-#endereco{
+#endereco {
   display: flex;
   flex-direction: column;
 }
 
-#endereco a{
+#endereco a {
   margin-top: 20px;
 }
 
 /*Créditos*/
 #footer-credits p {
   margin-top: 20px;
-  font-size: 12px;  
-  color: #5B5959;
+  font-size: 12px;
+  color: #5b5959;
 }
 
 /*Fim rodapé*/
@@ -578,12 +663,13 @@ footer{
   height: 566px;
 }
 
-.banner-container img { 
+.banner-container img {
   width: 100%;
   height: 100%;
 }
 
-.banner-container::after, .portfolio-card::after {
+.banner-container::after,
+.portfolio-card::after {
   content: "";
   position: absolute;
   top: 0;
@@ -597,7 +683,7 @@ footer{
   transition: opacity 0.5s ease;
 }
 
-.banner-container::before{
+.banner-container::before {
   content: "MÓVEIS \APLANEJADOS";
   white-space: pre-line;
   color: white;
@@ -608,21 +694,24 @@ footer{
   top: 50%;
   margin-left: 12.5%;
   transform: translateY(-50%);
-  z-index: 2; 
-  text-shadow: #000 4px 4px 6px ;
+  z-index: 2;
+  text-shadow: #000 4px 4px 6px;
 }
 
-.frase.paginas{
+.frase.paginas {
   margin-top: 0.2px;
 }
 /*Fim Banner*/
 
 /*Seção Qualidade*/
-#qualidade h1, #incluso h1, #porque h1{
+#qualidade h1,
+#incluso h1,
+#porque h1 {
   margin-bottom: 30px;
 }
 
-.conteudo-esquerda li, .conteudo-direita li{
+.conteudo-esquerda li,
+.conteudo-direita li {
   font: 14px "Poppins";
   text-align: justify;
   line-height: 25px;
@@ -631,11 +720,11 @@ footer{
   list-style-position: inside;
 }
 
-.verde{
+.verde {
   background-color: #c4cfb8;
 }
 
-#botao-qualidade{
+#botao-qualidade {
   margin-top: 20px;
 }
 /*Fim Qualidade*/
@@ -649,41 +738,40 @@ footer{
   position: relative;
 }
 
-#trabalhos-realizados h1{
+#trabalhos-realizados h1 {
   margin-bottom: 70px;
   margin-top: 70px;
 }
 
-.trabalhos-realizados-carousel, .depoimentos-carousel {
+.trabalhos-realizados-carousel,
+.depoimentos-carousel {
   display: flex;
   width: 75%;
   height: 570px;
-  overflow: hidden;
-  position: relative;
+  flex-direction: column;
+  
+  justify-content: center;
+  align-items: center;
 }
 
 .trabalhos-realizados-carousel-imgs {
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-  opacity: 0;
+  overflow: hidden;
   transition: opacity 0.5s ease-in-out;
 }
 
-.trabalhos-realizados-carousel-imgs.show{
+.trabalhos-realizados-carousel-imgs.realizados-ativo {
   opacity: 1;
-  z-index: 1;
+  display: flex;
 }
 
-#navegacao-trabalhos ul{
+#navegacao-trabalhos ul {
   width: 250px;
 }
 
-.trabalhos-realizados-carousel-imgs img{
+.trabalhos-realizados-carousel-imgs img {
   width: 406px;
   height: 565px;
 }
@@ -693,7 +781,7 @@ footer{
 /* ----- Página Projetos ------*/
 
 /* Banner*/
-.banner-container.container-projetos::before{
+.banner-container.container-projetos::before {
   content: "PROJETO DE \AINTERIORES";
   white-space: pre-line;
 }
@@ -717,14 +805,15 @@ footer{
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
-.imagem-esquerda.show{
+.imagem-esquerda.show {
   opacity: 1;
   z-index: 1;
 }
 /* Fim Imagens Etapas*/
 
 /* Accordion Etapas - Bootstrap*/
-.accordion, .accordion h2{
+.accordion,
+.accordion h2 {
   font: 14px "Poppins";
   text-align: justify;
   line-height: 44px;
@@ -736,35 +825,34 @@ footer{
 /* Fim Accordion Etapas - Bootstrap*/
 
 /* Section Portfólio*/
-#portfolio h1{
-  text-align:  center;
+#portfolio h1 {
+  text-align: center;
   margin: 80px 0 65px 0;
 }
 
-#porfolio-container{
+#porfolio-container {
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(3,0fr);
+  grid-template-columns: repeat(3, 0fr);
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
 }
 
-.portfolio-card{
+.portfolio-card {
   width: 598px;
   height: 338px;
   margin: 15px 15px;
   position: relative;
-  
 }
 
-.portfolio-card img{
+.portfolio-card img {
   width: 100%;
   height: 100%;
 }
 
-.portfolio-card::before{
+.portfolio-card::before {
   content: "";
   white-space: pre-line;
   color: white;
@@ -776,36 +864,36 @@ footer{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  z-index: 2; 
+  z-index: 2;
   text-shadow: #000 4px 4px 6px;
   transition: transform 0.5s ease;
 }
 
-.portfolio-card.cozinha::before{
-  content: "COZINHA";  
+.portfolio-card.cozinha::before {
+  content: "COZINHA";
 }
-.portfolio-card.quarto::before{
+.portfolio-card.quarto::before {
   content: "QUARTO";
 }
-.portfolio-card.closet::before{
+.portfolio-card.closet::before {
   content: "CLOSET";
 }
-.portfolio-card.sala::before{
+.portfolio-card.sala::before {
   content: "SALA";
 }
-.portfolio-card.banheiro::before{
+.portfolio-card.banheiro::before {
   content: "BANHEIRO";
 }
-.portfolio-card.escritorio::before{
+.portfolio-card.escritorio::before {
   content: "ESCRITÓRIO";
 }
-.portfolio-card.lazer::before{
+.portfolio-card.lazer::before {
   content: "LAZER";
 }
-.portfolio-card.corporativo::before{
+.portfolio-card.corporativo::before {
   content: "CORPORATIVO";
 }
-.portfolio-card.comercial::before{
+.portfolio-card.comercial::before {
   content: "COMERCIAL";
 }
 
@@ -822,33 +910,33 @@ footer{
 /* ----- Página Assessoria ------*/
 
 /*Banner*/
-.banner-container.container-obras::before{
+.banner-container.container-obras::before {
   content: "ASSESSORIA \A EM OBRAS";
   white-space: pre-line;
 }
 
-.frase-assessoria h2{
+.frase-assessoria h2 {
   width: 820px;
   padding: 0 20px;
 }
 /*Fim Banner*/
 
 /*Frase e Botão*/
-.frase-botao{
+.frase-botao {
   display: flex;
   flex-direction: column;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
 
-.frase-botao h2{
+.frase-botao h2 {
   width: auto;
   position: relative;
   bottom: 25px;
   padding-top: 30px;
 }
 
-#botao-container{
+#botao-container {
   width: 450px;
   height: 60px;
   display: flex;
@@ -871,10 +959,7 @@ footer{
 }
 /* Fim Frase e Botão*/
 
-
-
 /* ----- Fim Página Assessoria ------*/
-
 
 /*Página Sobre Nós*/
 
@@ -885,7 +970,7 @@ footer{
   height: 120vh;
 }
 
-.img-apresentacao-container{
+.img-apresentacao-container {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -894,21 +979,22 @@ footer{
   justify-content: center;
 }
 
-.img-apresentacao-container.marcio{
+.img-apresentacao-container.marcio {
   padding: 80px 60px 60px 0;
 }
 
-.img-apresentacao{
+.img-apresentacao {
   width: 350px;
   height: 350px;
   border-radius: 50%;
 }
 
-.conteudo-direita.apresentacao h1, .conteudo-esquerda.apresentacao h1{
+.conteudo-direita.apresentacao h1,
+.conteudo-esquerda.apresentacao h1 {
   margin-bottom: 30px;
 }
 
-.legenda{
+.legenda {
   font: 14px "Poppins";
   text-align: justify;
   line-height: 10px;
@@ -926,32 +1012,31 @@ footer{
   position: relative;
 }
 
-.card-depoimentos{
-  width: 300px ;
+.card-depoimentos {
+  width: 300px;
   height: 600px;
   background-color: white;
 }
 
-.depoimentos-carousel{
+.depoimentos-carousel {
   height: auto;
   width: 75%;
 }
 
-.depoimentos-carousel-container{
+.depoimentos-carousel-container {
   width: 100%;
-  display: flex;  
+  display: flex;
   justify-content: space-between;
   height: auto;
 }
 
-
-.card-depoimentos img{
+.card-depoimentos img {
   width: 140px;
   height: 140px;
   border-radius: 50%;
 }
 
-.card-depoimentos{
+.card-depoimentos {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -960,32 +1045,18 @@ footer{
   border-radius: 10px;
 }
 
-.card-depoimentos p{
+.card-depoimentos p {
   margin-top: 20px;
   line-height: 25px;
 }
-
-
-
 /* Fim Depoimentos*/
 
 /*Mapa*/
-iframe{
+iframe {
   width: 100%;
   height: 400px;
-  border: 0;}
-
+  border: 0;
+}
 /*Mapa*/
 
-
-
 /*Fim Página Sobre Nós*/
-
-
-
-
-
-
-
-
-

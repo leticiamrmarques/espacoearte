@@ -13,7 +13,7 @@
   <body>
 
     <!-- Menu -->
-    <header>
+      <header>
       <div id="header-container">
         <a class="logo" href="../index.html">
           <img src="../assets/img/Icones/LOGO.png" alt="Logotipo Espaço e Arte">
@@ -21,11 +21,27 @@
 
         <nav>
           <ul>
-            <li><a class="hover-effect" href="moveis.html">MÓVEIS PLANEJADOS</a></li>
-            <li><a class="hover-effect" href="projetos.html">PROJETO DE INTERIORES</a></li>
+            <li class="dropdown">
+              <a class="hover-effect menu-drop-moveis" href="moveis.html">MÓVEIS PLANEJADOS</a>
+              <div class="opcao-dropdown menu-drop-moveis">
+                <a href="moveis.html#trabalhos-realizados">TRABALHOS REALIZADOS</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a class="hover-effect menu-drop-projetos" href="projetos.html">PROJETO DE INTERIORES</a>
+              <div class="opcao-dropdown menu-drop-projetos">
+                <a href="projetos.html#portfolio">PORTFÓLIO</a>
+              </div>
+            </li>
             <li><a class="hover-effect" href="assessoria.html">ASSESSORIA EM OBRAS</a></li>
             <li><a class="hover-effect" href="#contato">CONTATO</a></li>
-            <li><a class="hover-effect" href="sobre.html">SOBRE NÓS</a></li>
+            <li class="dropdown">
+              <a class="hover-effect menu-drop-sobre" href="sobre.html">SOBRE NÓS</a>
+              <div class="opcao-dropdown menu-drop-sobre">
+                <a href="sobre.html#localizacao">LOCALIZAÇÃO</a>
+              </div>
+              
+            </li>
           </ul>
         </nav>
       </div>
@@ -86,7 +102,7 @@
       <h1>VEJA O QUE JÁ REALIZAMOS</h1>
 
       <div class="trabalhos-realizados-carousel">
-        <div class="trabalhos-realizados-carousel-imgs show">
+        <div class="trabalhos-realizados-carousel-imgs realizados-ativo">
           <img src="../assets/img/2.Moveis/Slide/slide-1.jpg" alt>
           <img src="../assets/img/2.Moveis/Slide/slide-2.jpg" alt>
           <img src="../assets/img/2.Moveis/Slide/slide-3.jpg" alt>
@@ -124,24 +140,18 @@
       </div>
 
       <div class="carousel-btns">
-        <button class="carousel-btn" id="left"><svg
-            xmlns="http://www.w3.org/2000/svg" height="35px"
-            viewBox="-180 -1000 960 960" width="35px" fill="#1f1f1f"><path
-              d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" /></svg></button>
-        <button class="carousel-btn" id="right"><svg
-            xmlns="http://www.w3.org/2000/svg" height="35px"
-            viewBox="0 -1000 960 960" width="35px" fill="#1f1f1f"><path
-              d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" /></svg></button>
+        <button class="carousel-btn" id="left-moveis"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="-180 -1000 960 960" width="35px" fill="#1f1f1f"><path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" /></svg></button>
+        <button class="carousel-btn" id="right-moveis"><svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -1000 960 960" width="35px" fill="#1f1f1f"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" /></svg></button>
       </div>
 
       <div class="carousel-circle-navigation" id="navegacao-trabalhos">
         <ul>
-          <li class="circulo active">⬤</li>
-          <li class="circulo">⬤</li>
-          <li class="circulo">⬤</li>
-          <li class="circulo">⬤</li>
-          <li class="circulo">⬤</li>
-          <li class="circulo">⬤</li>
+          <li class="circulo-moveis active">⬤</li>
+          <li class="circulo-moveis">⬤</li>
+          <li class="circulo-moveis">⬤</li>
+          <li class="circulo-moveis">⬤</li>
+          <li class="circulo-moveis">⬤</li>
+          <li class="circulo-moveis">⬤</li>
         </ul>
       </div>
     </section>
@@ -226,7 +236,7 @@
           <div id="endereco">
             <span>Quadra 1506 Sul, Av. LO 33, Lote 37, Plano Diretor Sul, Palmas - TO</span>
             <span>CEP: 77.027-060</span>
-            <a href="pages/trabalhe.html" class="trabalhe-link">
+            <a href="trabalhe.html" class="trabalhe-link">
             <span class="hover-effect ">Trabalhe Conosco</span></a>
           </div>
         </div>
@@ -240,7 +250,7 @@
     </footer>
     <!-- Fim Rodapé -->
 
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 
   </body>
 </html>

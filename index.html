@@ -13,19 +13,34 @@
   <body>
 
     <!-- Menu -->
-    <header>
+      <header>
       <div id="header-container">
         <a class="logo" href="index.html">
-          <img src="assets/img/Icones/LOGO.png" alt="Logotipo Espaço e Arte">
+          <img src="./assets/img/Icones/LOGO.png" alt="Logotipo Espaço e Arte">
         </a>
 
         <nav>
           <ul>
-            <li><a class="hover-effect" href="pages/moveis.html">MÓVEIS PLANEJADOS</a></li>
-            <li><a class="hover-effect" href="pages/projetos.html">PROJETO DE INTERIORES</a></li>
-            <li><a class="hover-effect" href="pages/assessoria.html">ASSESSORIA EM OBRAS</a></li>
+            <li class="dropdown">
+              <a class="hover-effect menu-drop-moveis" href="./pages/moveis.html">MÓVEIS PLANEJADOS</a>
+              <div class="opcao-dropdown menu-drop-moveis">
+                <a href="./pages/moveis.html#trabalhos-realizados">TRABALHOS REALIZADOS</a>
+              </div>
+            </li>
+            <li class="dropdown">
+              <a class="hover-effect menu-drop-projetos" href="./pages/projetos.html">PROJETO DE INTERIORES</a>
+              <div class="opcao-dropdown menu-drop-projetos">
+                <a href="./pages/projetos.html#portfolio">PORTFÓLIO</a>
+              </div>
+            </li>
+            <li><a class="hover-effect" href="./pages/assessoria.html">ASSESSORIA EM OBRAS</a></li>
             <li><a class="hover-effect" href="#contato">CONTATO</a></li>
-            <li><a class="hover-effect" href="pages/sobre.html">SOBRE NÓS</a></li>
+            <li class="dropdown">
+              <a class="hover-effect menu-drop-sobre" href="./pages/sobre.html">SOBRE NÓS</a>
+              <div class="opcao-dropdown menu-drop-sobre">
+                <a href="./pages/sobre.html#localizacao">LOCALIZAÇÃO</a>
+              </div>
+            </li>
           </ul>
         </nav>
       </div>
@@ -54,7 +69,7 @@
     <!-- Section Móveis Planejados -->
     <section class="conteudo">
       <article class="conteudo-esquerda">
-        <h1>MÓVEIS PLANEJADOS</h1>
+        <a href="./pages/moveis.html" class="h1-link"><h1>MÓVEIS PLANEJADOS</h1></a>
         <p>
           A fabricação de móveis planejados começa com um projeto personalizado,
           feito conforme as medidas e necessidades do cliente, de forma
@@ -74,12 +89,12 @@
     <!-- Section Projeto de Interiores -->
     <section class="projeto-interiores">
       <div class="projeto-interiores-container">
-        <h1>PROJETO DE INTERIORES</h1>
+        <a href="./pages/projetos.html" class="h1-link"><h1>PROJETO DE INTERIORES</h1></a>
         <p>Conheça nossos projetos e inspire-se.</p>
       </div>
 
       <div class="projeto-interiores-carousel">
-        <div class="projeto-interiores-carousel-imgs">
+        <div class="projeto-interiores-carousel-imgs projeto-ativo">
           <div class="img-wrapper projeto">
             <img src="assets/img/1.Index/index-projeto-quarto.png" alt>
           </div>
@@ -108,13 +123,13 @@
       </div>
 
       <div class="carousel-btns">
-        <button class="carousel-btn" id="left">
+        <button class="carousel-btn" id="left-projeto">
           <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="-180 -1000 960 960" width="35px" fill="#1f1f1f">
             <path d="M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z" />
           </svg>
         </button>
 
-        <button class="carousel-btn" id="right">
+        <button class="carousel-btn" id="right-projeto">
           <svg xmlns="http://www.w3.org/2000/svg" height="35px" viewBox="0 -1000 960 960" width="35px" fill="#1f1f1f">
             <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
           </svg>
@@ -123,9 +138,9 @@
 
       <div class="carousel-circle-navigation">
         <ul>
-          <li class="circulo active">⬤</li>
-          <li class="circulo">⬤</li>
-          <li class="circulo">⬤</li>
+          <li class="circulo-projeto active">⬤</li>
+          <li class="circulo-projeto">⬤</li>
+          <li class="circulo-projeto">⬤</li>
         </ul>
       </div>
     </section>
@@ -136,7 +151,7 @@
       <img class="imagem-esquerda" src="assets/img/1.Index/index-assessoria.png"
         alt="Assessoria em Obras">
       <article class="conteudo-direita">
-        <h1>ASSESSORIA EM OBRAS</h1>
+        <a href="./pages/assessoria.html" class="h1-link"><h1>ASSESSORIA EM OBRAS</h1></a>
         <p>
           A assessoria em obras oferece suporte completo, com
           orientação técnica desde o início do projeto até sua
