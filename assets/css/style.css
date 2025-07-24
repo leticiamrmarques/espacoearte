@@ -247,7 +247,7 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
   background-color: #c4cfb8;
   position: relative;
   padding: 60px;
-  margin-top: -3.5px;
+  margin-top: -4px;
 }
 
 .frase::before,
@@ -304,9 +304,6 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
   height: 100%;
   overflow: hidden;
 }
-
-
-
 /* Fim Móveis Planejados*/
 
 /* Botão orçamento*/
@@ -341,10 +338,9 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 /* Fim botão orçamento*/
 
 /* Section Projeto de Interiores*/
-
 .projeto-interiores {
   background-color: #c4cfb8;
-  height: 790px;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -655,17 +651,14 @@ footer {
 /*Fim rodapé*/
 
 /* ----- Página Móveis Planejados ------*/
-
 /*Banner*/
 .banner-container {
   position: relative;
   width: 100%;
-  height: 566px;
 }
 
 .banner-container img {
   width: 100%;
-  height: 100%;
 }
 
 .banner-container::after,
@@ -679,8 +672,8 @@ footer {
   background-color: black;
   opacity: 0.5;
   z-index: 1;
-  height: 100%;
-  transition: opacity 0.5s ease;
+  height: 99.5%;
+    transition: opacity 0.5s ease;
 }
 
 .banner-container::before {
@@ -699,7 +692,7 @@ footer {
 }
 
 .frase.paginas {
-  margin-top: 0.2px;
+  margin-top: -3px;
 }
 /*Fim Banner*/
 
@@ -729,7 +722,7 @@ footer {
 }
 /*Fim Qualidade*/
 
-/* Section Trabalhos realizados */
+/* Slide Trabalhos realizados */
 #trabalhos-realizados {
   height: 830px;
   display: flex;
@@ -748,8 +741,7 @@ footer {
   display: flex;
   width: 75%;
   height: 570px;
-  flex-direction: column;
-  
+  flex-direction: column;  
   justify-content: center;
   align-items: center;
 }
@@ -1054,9 +1046,91 @@ footer {
 /*Mapa*/
 iframe {
   width: 100%;
-  height: 400px;
+  height: 50vh;
   border: 0;
+  margin-bottom: -4px;
 }
 /*Mapa*/
 
 /*Fim Página Sobre Nós*/
+
+/*Página Trabalhe Conosco*/
+
+
+/* Fim Página Trabalhe Conosco*/
+
+#formulario-trabalhe{
+  height: 135vh;
+}
+
+.conteudo-esquerda.trabalhe{
+  align-self: self-start;
+  margin-top: 102px;
+}
+
+.conteudo-esquerda.trabalhe p{
+  margin: 10px 0;
+}
+
+.conteudo-esquerda.trabalhe h1{
+  margin-bottom: 30px;
+}
+
+/* Estilo atualizado para campo de anexar currículo */
+.file-input-wrapper {
+  margin-top: 2px;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 300;  
+  position: relative;
+}
+
+.file-input-wrapper input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.file-placeholder {
+  color: #3c3c3c
+}
+
+.upload-icon {
+  width: 25px;
+  position: absolute;
+  right: 12px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+#formatos-aceitos{
+  font-size: 12px;
+}
+
+#mensagens-alerta{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 55px;
+  margin-top: 40px;
+}
+
+#cancelar-trabalhe{
+  background-color: #DDA15E;
+}
+
+#cancelar-trabalhe:hover{
+  background-color: #e98b1f ;
+}

@@ -34,7 +34,7 @@
               </div>
             </li>
             <li><a class="hover-effect" href="assessoria.html">ASSESSORIA EM OBRAS</a></li>
-            <li><a class="hover-effect" href="#contato">CONTATO</a></li>
+            <li><a class="hover-effect" href="../index.html#contato">CONTATO</a></li>
             <li class="dropdown">
               <a class="hover-effect menu-drop-sobre" href="sobre.html">SOBRE NÓS</a>
               <div class="opcao-dropdown menu-drop-sobre">
@@ -48,14 +48,72 @@
     </header>
     <!-- Fim Menu -->
 
-    <section>teste</section>
+    <section class="conteudo" id="formulario-trabalhe">
+      <div class="conteudo-esquerda trabalhe">
+        <h1>TRABALHE CONOSCO</h1>
+        <p>
+          Na Espaço e Arte, acreditamos que grandes projetos começam com pessoas apaixonadas pelo que fazem. Se você é tem criatividade, comprometimento e busca crescer em um ambiente colaborativo e dinâmico, queremos conhecer você!
+        </p>
+        <p>
+          Valorizamos profissionais que compartilham do nosso cuidado com cada detalhe, que gostam de desafios e têm vontade de transformar espaços em experiências únicas.
+        </p>
+        <p>
+          <p><strong>Cadastre seu currículo</strong> no formulário ao lado. Estamos sempre em busca de novos talentos para fazer parte da nossa equipe!
+        </p>
+      </div>
 
+       <form class="formulario">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Nome completo" required>
 
+        <label for="telefone">Telefone</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" required>
 
+        <label for="email">E-mail</label>
+        <input type="email" id="email" placeholder="usuario@email.com" />
 
+        <label>Área de interesse</label>
+        <select>
+          <option>Selecione</option>
+          <option>Estágio</option>
+          <option>Design de Interiores</option>
+          <option>Marcenaria</option>       
+        </select>
 
+        <label>Pretenção salarial</label>
+        <input type="text" placeholder="R$ 9999,99" />
 
+        <label>Mensagem</label>
+        <textarea rows="8" placeholder="Descreva suas habilidades, conhecimentos e interesses"></textarea>
 
+        <label>Como conheceu a empresa?</label>
+        <select>
+          <option value>Selecione</option>
+          <option value="instagram">Instagram</option>
+          <option value="google">Google</option>
+          <option value="indicação">Indicação</option>
+          <option value="outro">Outro</option>
+        </select>
+
+        <label for="curriculo">Anexar currículo</label>
+        <div class="file-input-wrapper">
+          <input type="file" id="curriculo" class="file-input" accept=".pdf,.doc,.docx">
+          <span class="file-placeholder">Selecione um arquivo até 10 MB</span>
+          <img class="upload-icon" src="../assets/img/Icones/upload.png" alt="">
+        </div> 
+        
+        <div id="mensagens-alerta">
+          <span id="formatos-aceitos">Formatos aceitos: pdf, doc, docx.</span>
+          <span class="error-message">Nenhum arquivo selecionado</span>          
+        </div>
+
+        <div class="buttons">
+          <button type="submit" class="enviar-trabalhe">ENVIAR</button>
+          <button type="button" id="cancelar-trabalhe">CANCELAR</button>
+        </div>      
+         
+      </form>
+    </section>
 
 
 

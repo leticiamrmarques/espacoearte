@@ -1,0 +1,141 @@
+
+/*TELA NOTEBOOK*/
+@media screen and (max-width: 1600px) {
+    a {
+        font: 13px "Poppins";
+        color: #282828;
+        font-weight: 600;
+      }
+      
+      h2 {
+        font: 18px "Lora", serif;
+      }
+      
+      h1 {
+        font: 28px "Lora";
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: #202020;
+      }
+      
+      p {
+        font: 12px "Poppins";
+        text-align: justify;
+        line-height: 44px;
+        color: #282828;
+      }
+
+      .conteudo-esquerda, .conteudo-direita  {
+        width: 440px;
+      }
+
+      .btn-orcamento span {
+        font-size: 14px;
+      }
+
+      .projeto-interiores-container, #depoimentos-container {
+        width: 75%;
+        margin: 60px 0 40px 0;
+      }
+
+      .projeto-interiores-carousel, .projeto-interiores-carousel-imgs img {
+        height: 325px;
+      }
+
+      .img-wrapper::after{
+        font-size: 14px;
+      }
+
+      .card {
+        width: 180px;
+        height: 180px;
+      }
+
+      .card img {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 15px;
+      }
+
+      .card p {
+        font-size: 14px;
+      }
+
+      .formulario, .formulario button{
+        width: 550px;
+        font-size: 14px;        
+      }
+
+      .formulario input, .formulario textarea, .formulario select {
+        font-size: 12px;
+      }
+
+      #contato{
+        height: 105vh;
+      }
+
+      .banner-container::before {
+        font-size: 48px;
+      }
+
+      #trabalhos-realizados {
+        height: 105vh;
+      }
+
+      #trabalhos-realizados h1 {
+        margin-bottom: 10px;
+        margin-top: 70px;
+      }
+   
+      .trabalhos-realizados-carousel-imgs img {
+        width: 345px;
+        height: 480px;
+      }
+        
+      #navegacao-trabalhos ul {
+        margin-top: 0px;
+      }
+
+      .portfolio-card {
+        width: 470px;
+        height: 262px;
+      }
+
+      #portfolio h1 {
+        margin: 60px 0 45px 0;
+      }
+
+      .img-apresentacao-container img{
+        width: 300px;
+        height: 300px;
+      }
+
+      .conteudo-apresentacao{
+        margin-bottom: 130px;
+      }
+
+      .card-depoimentos {
+        width: 280px;
+        height: 500px;
+      }
+
+      .card-depoimentos img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+      }
+
+      #depoimentos {
+        height: 115vh;
+      }
+
+
+
+                
+
+    
+
+
+
+
+}
