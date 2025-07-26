@@ -230,6 +230,7 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 
 .banner-slider ul li {
   list-style-type: none;
+  background-color: transparent;
 }
 
 .banner-slider .circulo {
@@ -763,6 +764,10 @@ footer {
   width: 250px;
 }
 
+#navegacao-trabalhos li{
+  background-color: white;
+}
+
 .trabalhos-realizados-carousel-imgs img {
   width: 406px;
   height: 565px;
@@ -803,18 +808,62 @@ footer {
 }
 /* Fim Imagens Etapas*/
 
-/* Accordion Etapas - Bootstrap*/
-.accordion,
-.accordion h2 {
-  font: 14px "Poppins";
-  text-align: justify;
-  line-height: 44px;
+/* Accordion Etapas*/
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #c4cfb8;
   color: #282828;
-  overflow: hidden;
-  height: 450px;
-  border: purple solid 2px;
+  cursor: pointer;
+  height: 48px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  border-bottom: 1.5px solid #282828;
+  transition: 0.4s;
+  margin-top: 20px;
+  font-weight: 700;
+  font-family: Poppins, sans-serif;
 }
-/* Fim Accordion Etapas - Bootstrap*/
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #c4cfb8;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  background-color: #c4cfb8;
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion:after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-180 -1000 960 960' fill='%231f1f1f'><path d='M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z'/></svg>");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(-90deg); /* seta para baixo */
+  transition: transform 0.3s ease;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  transform: rotate(90deg); /* seta para cima */
+}
+
+
+.accordion.active:first-of-type {
+  cursor: default; /* cursor normal, sem a mãozinha */
+}
+
+
+
+/* Fim Accordion Etapas*/
 
 /* Section Portfólio*/
 #portfolio h1 {
@@ -896,6 +945,56 @@ footer {
 .portfolio-card:hover::after {
   opacity: 0.75;
 }
+
+/* Overlay */
+  #overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right:0; bottom: 0;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  #overlay.active {
+    display: flex;
+  }
+  #slide-image {
+    max-width: 90vw;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #000;
+  }
+  /* Navegação */
+  .nav-button {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    user-select: none;
+  }
+  #prev-btn {
+    left: 20px;
+  }
+  #next-btn {
+    right: 20px;
+  }
+  #close-btn {
+    position: fixed;
+    top: 20px; right: 20px;
+    font-size: 30px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+
 /* Fim Portfólio*/
 /* ----- Fim Página Projetos ------*/
 

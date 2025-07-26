@@ -91,60 +91,27 @@
 
       <article class="conteudo-direita">
         <h1>ETAPAS DO PROJETO</h1>
-        <!-- Accordion Bootstrap-->
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                <strong>Estudo Preliminar</strong>
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Essa é a fase inicial de criação, onde traduzimos seus desejos e necessidades em ideias concretas. Após o briefing, estudamos possibilidades, analisamos o espaço e propomos soluções que alinhem estética, funcionalidade e viabilidade técnica. É o momento em que o conceito do projeto começa a tomar forma.
-              </div>
-            </div>
+        <!-- Accordion -->
+        <button class="accordion">Estudo Preliminar</button>
+          <div class="panel">
+            <p>Essa é a fase inicial de criação, onde traduzimos seus desejos e necessidades em ideias concretas. Após o briefing, estudamos possibilidades, analisamos o espaço e propomos soluções que alinhem estética, funcionalidade e viabilidade técnica. É o momento em que o conceito do projeto começa a tomar forma.</p>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <strong>Anteprojeto</strong>
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Com o conceito definido, desenvolvemos as primeiras plantas e representações visuais do ambiente. Apresentamos propostas de layout, materiais e elementos visuais que permitem a você visualizar o resultado final. Também iniciamos a compatibilização com os projetos complementares (elétrico, hidráulico, estrutural), garantindo que tudo funcione de forma integrada.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                <strong>Projeto Executivo</strong>
-              </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                Agora é hora de transformar o projeto em instruções precisas para a execução. No projeto executivo, detalhamos todos os elementos técnicos: plantas com medidas, especificações de acabamentos, pontos elétricos e hidráulicos, iluminação e muito mais. É um verdadeiro manual que garante clareza e segurança durante a obra.
-              </div>
-            </div>
-          </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                <strong>Detalhamento</strong>
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                É nos detalhes que o projeto ganha sofisticação. Nessa fase, aprofundamos ainda mais as informações com desenhos específicos de marcenaria, paginação de pisos, forros, iluminação decorativa e acabamentos personalizados. Tudo para que o resultado final seja fiel ao conceito e surpreenda nos pequenos grandes detalhes.
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Fim Accordion Bootstrap-->
 
-        <a href="https://wa.me/5563981533434" class="btn-orcamento" id="botao-qualidade" target="_blank"> <span>SOLICITE SEU ORÇAMENTO</span></a>
+        <button class="accordion">Anteprojeto</button>
+          <div class="panel">
+            <p>Com o conceito definido, desenvolvemos as primeiras plantas e representações visuais do ambiente. Apresentamos propostas de layout, materiais e elementos visuais que permitem a você visualizar o resultado final. Também iniciamos a compatibilização com os projetos complementares (elétrico, hidráulico, estrutural), garantindo que tudo funcione de forma integrada.</p>
+          </div>
+
+        <button class="accordion">Projeto Executivo</button>
+          <div class="panel">
+            <p>Agora é hora de transformar o projeto em instruções precisas para a execução. No projeto executivo, detalhamos todos os elementos técnicos: plantas com medidas, especificações de acabamentos, pontos elétricos e hidráulicos, iluminação e muito mais. É um verdadeiro manual que garante clareza e segurança durante a obra.</p>
+          </div>
+
+        <button class="accordion">Detalhamento</button>
+          <div class="panel">
+            <p>É nos detalhes que o projeto ganha sofisticação. Nessa fase, aprofundamos ainda mais as informações com desenhos específicos de marcenaria, paginação de pisos, forros, iluminação decorativa e acabamentos personalizados. Tudo para que o resultado final seja fiel ao conceito e surpreenda nos pequenos grandes detalhes.</p>
+          </div>
+        <!-- Fim Accordion -->
       </article>      
     </section>
     <!-- Fim Etapas -->
@@ -154,7 +121,7 @@
       <h1>CONFIRA NOSSO PORTFÓLIO</h1>
 
       <div id="porfolio-container">
-        <div class="portfolio-card cozinha">
+        <div class="portfolio-card cozinha" data-category="cozinha">
           <img class="portfolio-imagem" src="../assets/img/3.Projeto/Portfolio/COZINHA.png" alt="">
         </div>
         <div class="portfolio-card quarto">
@@ -182,11 +149,14 @@
           <img class="portfolio-imagem" src="../assets/img/3.Projeto/Portfolio/COMERCIAL.png" alt="">
         </div>
       </div>
-
      </section>
 
-
-
+    <div id="overlay">
+      <button id="close-btn">&times;</button>
+      <button id="prev-btn" class="nav-button">&#10094;</button>
+      <img id="slide-image" src="" alt="Slide Image" />
+      <button id="next-btn" class="nav-button">&#10095;</button>
+    </div>
      <!-- Fim Portfólio -->
 
     
@@ -284,7 +254,7 @@
     </footer>
     <!-- Fim Rodapé -->
 
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
     
   </body>
 </html>

@@ -33,13 +33,21 @@
         font-size: 14px;
       }
 
+      .projeto-interiores{
+        height: 80vh;
+      }
+
       .projeto-interiores-container, #depoimentos-container {
         width: 75%;
         margin: 60px 0 40px 0;
       }
 
       .projeto-interiores-carousel, .projeto-interiores-carousel-imgs img {
-        height: 325px;
+        height: 342px;
+      }
+
+      .carousel-btns {
+        top: 45%;
       }
 
       .img-wrapper::after{
@@ -71,7 +79,7 @@
       }
 
       #contato{
-        height: 105vh;
+        height: 90vh;
       }
 
       .banner-container::before {
@@ -79,7 +87,11 @@
       }
 
       #trabalhos-realizados {
-        height: 105vh;
+        height: 88vh;
+      }
+
+      .carousel-btns.moveis-seta{
+        top: 53%;
       }
 
       #trabalhos-realizados h1 {
@@ -116,17 +128,20 @@
 
       .card-depoimentos {
         width: 280px;
-        height: 500px;
-      }
-
-      .card-depoimentos img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
+        height: 550px;
       }
 
       #depoimentos {
-        height: 115vh;
+        height: 102vh;
+      }
+
+      .carousel-btns.depoimentos-seta{
+        top: 53%;
+      }
+
+      #formulario-trabalhe{
+        height: 139vh;
+
       }
 
 
