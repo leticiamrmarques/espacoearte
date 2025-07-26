@@ -244,14 +244,81 @@ document.addEventListener("DOMContentLoaded", function () {
       "../assets/img/6.Overlay/Cozinha/projetos-cozinha10.png",
       "../assets/img/6.Overlay/Cozinha/projetos-cozinha11.png",
     ],
+
     quarto: [
-      "",
-      "",
-      "",
-      "",
-      
+      "../assets/img/6.Overlay/Quarto/Quarto (1).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (2).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (3).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (4).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (5).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (6).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (7).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (8).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (9).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (10).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (11).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (12).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (13).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (14).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (15).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (16).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (17).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (18).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (19).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (20).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (21).png",
+      "../assets/img/6.Overlay/Quarto/Quarto (22).png",
     ],
-    // Adicione outras categorias aqui
+
+    closet: [
+      "../assets/img/6.Overlay/Closet/Closet (1).png",
+      "../assets/img/6.Overlay/Closet/Closet (2).png",
+      "../assets/img/6.Overlay/Closet/Closet (3).png",
+    ],
+
+    sala: [
+      "../assets/img/6.Overlay/Salas/Sala1.jpeg",
+      "../assets/img/6.Overlay/Salas/Sala2.jpg",
+      "../assets/img/6.Overlay/Salas/Sala3.png",
+      "../assets/img/6.Overlay/Salas/Sala4.jpg",
+      "../assets/img/6.Overlay/Salas/Sala5.png",
+      "../assets/img/6.Overlay/Salas/Sala6.png",
+      "../assets/img/6.Overlay/Salas/Sala7.png",
+      "../assets/img/6.Overlay/Salas/Sala8.png",
+      "../assets/img/6.Overlay/Salas/Sala9.png",
+      "../assets/img/6.Overlay/Salas/Sala10.png",
+      "../assets/img/6.Overlay/Salas/Sala11.png",
+      "../assets/img/6.Overlay/Salas/Sala12.png",
+      "../assets/img/6.Overlay/Salas/Sala13.png",
+      "../assets/img/6.Overlay/Salas/Sala14.png",
+      "../assets/img/6.Overlay/Salas/Sala15.png",
+      "../assets/img/6.Overlay/Salas/Sala16.png",
+      "../assets/img/6.Overlay/Salas/Sala17.png",
+      "../assets/img/6.Overlay/Salas/Sala18.png",
+    ],
+
+    banheiro: [
+      "../assets/img/6.Overlay/Banheiro/banheiro (1).png",
+      "../assets/img/6.Overlay/Banheiro/banheiro (2).png",
+    ],
+
+    escritorio: [
+      "../assets/img/6.Overlay/Escritorio/Escritorio (1).png",
+      "../assets/img/6.Overlay/Escritorio/Escritorio (2).png",
+      "../assets/img/6.Overlay/Escritorio/Escritorio (3).png",
+    ],
+
+    lazer: [
+      "../assets/img/6.Overlay/Lazer/Lazer.png",
+    ],
+
+    corporativo: [
+
+    ],
+
+    comercial:[
+      "../assets/img/6.Overlay/Comercial/Comercial.png",
+    ],
   };
 
   // Seleção dos elementos

@@ -840,29 +840,26 @@ footer {
 
 .accordion:after {
   content: "";
-  display: inline-block;
+  display: block;
   width: 20px;
   height: 20px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-180 -1000 960 960' fill='%231f1f1f'><path d='M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z'/></svg>");
   background-repeat: no-repeat;
   background-size: contain;
-  transform: rotate(-90deg); /* seta para baixo */
+  transform: rotate(-90deg); /* seta para cima */
   transition: transform 0.3s ease;
   float: right;
   margin-left: 5px;
 }
 
 .accordion.active:after {
-  transform: rotate(90deg); /* seta para cima */
+  transform: rotate(90deg); /* seta para baixo */
 }
 
 
 .accordion.active:first-of-type {
   cursor: default; /* cursor normal, sem a mãozinha */
 }
-
-
-
 /* Fim Accordion Etapas*/
 
 /* Section Portfólio*/
@@ -886,6 +883,7 @@ footer {
   height: 338px;
   margin: 15px 15px;
   position: relative;
+  cursor: pointer;
 }
 
 .portfolio-card img {
