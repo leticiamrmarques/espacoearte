@@ -1,156 +1,312 @@
+/* X-Small devices (portrait phones, less than 576px)*/
+@media (max-width: 576px) {  }
 
-/*TELA NOTEBOOK*/
-@media screen and (max-width: 1600px) {
-    a {
-        font: 13px "Poppins";
-        color: #282828;
-        font-weight: 600;
-      }
-      
-      h2 {
-        font: 18px "Lora", serif;
-      }
-      
-      h1 {
-        font: 28px "Lora";
-        font-weight: 600;
-        letter-spacing: 1px;
-        color: #202020;
-      }
-      
-      p {
-        font: 12px "Poppins";
-        text-align: justify;
-        line-height: 44px;
-        color: #282828;
-      }
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 768px) {  }
 
-      .conteudo-esquerda, .conteudo-direita  {
-        width: 440px;
-      }
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 992px) { }
 
-      .btn-orcamento span {
-        font-size: 14px;
-      }
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 1200px) {
+/* Tipografia base */
+a {
+  font: 0.6rem "Poppins";
+  color: #282828;
+  font-weight: 600;
+}
 
-      .projeto-interiores{
-        height: 80vh;
-      }
+p, .footer-contatos a, .footer-enderecos span,
+.conteudo-esquerda li, .conteudo-direita li {
+  font: 0.6rem "Poppins";
+  color: #282828;
+}
 
-      .projeto-interiores-container, #depoimentos-container {
-        width: 75%;
-        margin: 60px 0 40px 0;
-      }
+p {
+  text-align: justify;
+  line-height: 1.7rem;
+}
 
-      .projeto-interiores-carousel, .projeto-interiores-carousel-imgs img {
-        height: 342px;
-      }
+h1 {
+  font: 1.3rem "Lora";
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #202020;
+}
 
-      .carousel-btns {
-        top: 45%;
-      }
+h2 {
+  font: 0.9rem "Lora", serif;
+}
 
-      .img-wrapper::after{
-        font-size: 14px;
-      }
+header {
+    height: 120px;
+}
 
-      .card {
-        width: 180px;
-        height: 180px;
-      }
+/* Logo */
+.logo img {
+  height: 75px;
+}
 
-      .card img {
-        width: 30px;
-        height: 30px;
-        margin-bottom: 15px;
-      }
+/* Navegação */
+nav ul {
+  gap: 10px;
+}
 
-      .card p {
-        font-size: 14px;
-      }
+/* Dropdown menus */
+.menu-drop-moveis { width: 110px; }
+.menu-drop-moveis.opcao-dropdown { width: 128px; }
 
-      .formulario, .formulario button{
-        width: 550px;
-        font-size: 14px;        
-      }
+.menu-drop-projetos { width: 126px; }
+.menu-drop-projetos.opcao-dropdown { width: 134px; }
 
-      .formulario input, .formulario textarea, .formulario select {
-        font-size: 12px;
-      }
+.menu-drop-sobre { width: 55px; }
+.menu-drop-sobre.opcao-dropdown { width: 63px; }
 
-      #contato{
-        height: 90vh;
-      }
+/* Frase destaque */
+.frase h2 {
+  width: 380px;
+}
 
-      .banner-container::before {
-        font-size: 48px;
-      }
+/* Conteúdo principal */
+.conteudo-esquerda {
+  margin-right: 4rem;
+}
 
-      #trabalhos-realizados {
-        height: 88vh;
-      }
+.conteudo p {
+  margin: 1rem 0;
+}
 
-      .carousel-btns.moveis-seta{
-        top: 53%;
-      }
+.conteudo-esquerda li,
+.conteudo-direita li {
+  line-height: 1rem;
+}
 
-      #trabalhos-realizados h1 {
-        margin-bottom: 10px;
-        margin-top: 70px;
-      }
-   
-      .trabalhos-realizados-carousel-imgs img {
-        width: 345px;
-        height: 480px;
-      }
-        
-      #navegacao-trabalhos ul {
-        margin-top: 0px;
-      }
+/* Botões */
+.btn-orcamento {
+  height: 2.2rem;
+  width: 12rem;
+}
 
-      .portfolio-card {
-        width: 470px;
-        height: 262px;
-      }
+.btn-orcamento span {
+  font-size: 0.7rem;
+}
 
-      #portfolio h1 {
-        margin: 60px 0 45px 0;
-      }
+/* Containers */
+.projeto-interiores-container,
+#depoimentos-container {
+  width: 75%;
+  margin: 2.2rem 0 1.4rem 0;
+}
 
-      .img-apresentacao-container img{
-        width: 300px;
-        height: 300px;
-      }
+.projeto-interiores {
+  padding-bottom: 1.4rem;
+}
 
-      .conteudo-apresentacao{
-        margin-bottom: 130px;
-      }
+.carousel-circle-navigation ul {
+  margin-top: 0.4rem;
+}
 
-      .card-depoimentos {
-        width: 280px;
-        height: 550px;
-      }
+/* Imagens com overlay */
+.img-wrapper::after {
+  padding: 0.5rem;
+  font-size: 0.7rem;
+}
 
-      #depoimentos {
-        height: 102vh;
-      }
+/* Cards */
+.card {
+  background-color: #fff;
+  width: 10rem;
+  height: 10rem;
+}
 
-      .carousel-btns.depoimentos-seta{
-        top: 53%;
-      }
+.card img {
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
 
-      #formulario-trabalhe{
-        height: 139vh;
+.card p {
+  font-size: 0.7rem;
+  line-height: 1.2rem;
+  text-align: center;
+}
 
-      }
+/* Contato */
+#contato {
+  height: auto;
+  padding: 3rem 0;
+}
 
+#contato p {
+  margin-bottom: 0.5rem;
+}
 
+#contato h1 {
+  margin-bottom: 1.5rem;
+}
 
-                
+/* Formulário */
+.formulario {
+  font-size: 0.7rem;
+}
 
-    
+.formulario input,
+.formulario textarea,
+.formulario select {
+  font-size: 0.6rem;
+}
 
+.formulario button {
+  height: 2.3rem;
+  font-size: 0.8rem;
+}
 
+/* Ícones */
+.contato-item img,
+.footer-enderecos img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
 
+/* Créditos rodapé */
+#footer-credits p {
+  font-size: 0.5rem;
+}
+
+/* Banners e cards com overlay */
+.banner-container::after,
+.portfolio-card::after {
+  height: 99%;
+}
+
+.banner-container::before {
+  font-size: 2.3rem;
+}
+
+/* Títulos das seções */
+#qualidade h1,
+#incluso h1,
+#porque h1 {
+  margin-bottom: 0.5rem;
+}
+
+#trabalhos-realizados h1 {
+  margin: 2rem 0;
+}
+
+/* Trabalhe conosco */
+#formulario-trabalhe {
+  height: auto;
+  padding: 2rem 0;
+}
+
+/* Accordion */
+.accordion {
+  height: 2rem;
+  margin-top: 1rem;
+  font-size: 0.7rem;
+}
+
+.accordion:after {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Portfólio */
+#portfolio h1 {
+  margin: 2rem 0 1.5rem;
+}
+
+.portfolio-card::before {
+  font-size: 28px;
+}
+
+.frase-assessoria h2{
+    width: 600px;
+}
+
+/* Vídeo */
+#videoApresentacao {
+  max-height: 70vh;
+}
+
+/* Apresentação */
+.conteudo-apresentacao {
+  padding-bottom: 4rem;
+}
+
+.img-apresentacao {
+  width: 220px;
+  height: 220px;
+}
+
+.conteudo-direita.apresentacao h1,
+.conteudo-esquerda.apresentacao h1 {
+  margin-bottom: 1.2rem;
+}
+
+/* Legenda */
+.legenda {
+  font-size: 0.7rem;
+  text-align: justify;
+  line-height: 0.3rem;
+}
+
+/* Depoimentos */
+#depoimentos {
+  padding-bottom: 2rem;
+}
+
+.card-depoimentos {
+  width: 16rem;
+}
+
+.card-depoimentos img {
+  width: 6rem;
+  height: 6rem;
+}
+
+.card-depoimentos p {
+  margin-top: 1rem;
+  line-height: 1.2rem;
+}
+
+/* Mapa */
+iframe {
+  height: 32vh;
+}
+
+.file-input-wrapper {
+  font-size: 0.6rem;
+}
+
+.error-message, #formatos-aceitos{
+  font-size: 0.6rem;
+}
+
+.upload-icon {
+  width: 1rem;
+}
+
+.buttons {
+  margin-top: 1.5rem;
+}
+
+footer {
+  height: 13rem;
+}
 
 }
+
+
+
+
+
+
+
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (max-width: 1400px) { }
+
+ /* TELEVISÃO*/
+@media (max-width: 1920px) { }

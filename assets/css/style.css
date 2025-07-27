@@ -12,26 +12,26 @@ html {
 }
 
 a {
-  font: 14px "Poppins";
+  font: 0.875rem "Poppins";
   color: #282828;
   font-weight: 600;
 }
 
 h2 {
-  font: 20px "Lora", serif;
+  font: 1.25rem "Lora", serif;
 }
 
 h1 {
-  font: 30px "Lora";
+  font: 1.875rem "Lora";
   font-weight: 600;
   letter-spacing: 1px;
   color: #202020;
 }
 
 p {
-  font: 14px "Poppins";
+  font: 0.875rem "Poppins";
   text-align: justify;
-  line-height: 44px;
+  line-height: 2.75rem;
   color: #282828;
 }
 
@@ -52,6 +52,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
+
 }
 
 .logo img {
@@ -69,8 +71,11 @@ header {
 }
 
 nav {
-  justify-content: right;
+  justify-content: flex-end;
   margin-top: 48px;
+  margin-left: 6rem;
+  position: absolute;
+  right: 0;
 }
 
 nav ul {
@@ -217,13 +222,13 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 
 .banner-slider ul {
   display: flex;
-  width: 100px;
-  height: 30px;
+  width: 6.25rem;
+  height: 1.875rem;
   justify-content: space-between;
   align-items: center;
   position: absolute;
-  right: 15px;
-  bottom: 15px;
+  right: 0.9375rem;
+  bottom: 0.9375rem;
   cursor: pointer;
   z-index: 2;
 }
@@ -247,8 +252,8 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 .frase {
   background-color: #c4cfb8;
   position: relative;
-  padding: 60px;
-  margin-top: -4px;
+  padding: 3.75rem;
+  margin-top: -0.25rem;
 }
 
 .frase::before,
@@ -283,17 +288,17 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 .conteudo {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 90vh;
 }
 
 .conteudo p {
-  margin: 30px 0;
+  margin: 1.875rem 0;
 }
 
 .conteudo-esquerda {
   margin-left: 25%;
-  width: 530px;
-  min-height: 450px;
+  margin-right: 6rem;
+  max-width: 33.125rem;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -302,17 +307,18 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 
 .imagem-direita {
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
+  object-fit: cover;
 }
 /* Fim Móveis Planejados*/
 
 /* Botão orçamento*/
 .btn-orcamento {
-  height: 44px;
-  width: 300px;
+  height: 2.75rem;
+  width: 18.75rem;
   background-color: #6b705c;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   align-content: center;
   text-align: center;
   text-decoration: none;
@@ -321,9 +327,9 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 
 .btn-orcamento span {
   color: #ffff;
-  font: 16px "Poppins";
+  font: 1rem "Poppins";
   font-weight: 650;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.0.5rem;
   transform: scale(1);
   transition: scale 0.5s ease;
   display: inline-block;
@@ -341,22 +347,28 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 /* Section Projeto de Interiores*/
 .projeto-interiores {
   background-color: #c4cfb8;
-  height: 90vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 4rem;
+}
+
+.container-combotao{
+  width: 100%;
+  justify-items: center;
   position: relative;
 }
 
 .projeto-interiores-container,
 #depoimentos-container {
   width: 75%;
-  margin: 80px 0 60px 0;
+  margin: 5rem 0 3.75rem 0;
+
 }
 
 .projeto-interiores-carousel {
   width: 75%;
-  height: 410px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -369,7 +381,7 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
   display: none;
   opacity: 0;
   justify-content: space-between;
-}
+  }
 
 .projeto-interiores-carousel-imgs.projeto-ativo{
   display: flex;
@@ -377,7 +389,8 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 }
 
 .projeto-interiores-carousel-imgs img {
-  height: 410px;
+  max-width: 100%;
+  height: auto;
 }
 
 .img-wrapper {
@@ -385,19 +398,27 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
   position: relative;
 }
 
+.img-wrapper.projeto {
+  margin-right: 1.5vw;
+}
+
+.img-wrapper.execucao {
+  margin-left: 1.5vw;
+}
+
+
 .img-wrapper::after {
   content: "";
   position: absolute;
   color: #ffffff;
   background: #00000090;
-  padding: 10px 10px;
+  padding: 0.625rem 0.625rem;
   border-radius: 3px 0px 3px;
-  font-weight: bold;
   top: 0px;
   left: 0px;
   font-family: "Poppins", sans-serif;
   font-optical-sizing: auto;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
@@ -414,7 +435,8 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 52.5%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .carousel-btn {
@@ -425,12 +447,12 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 
 .carousel-circle-navigation ul {
   display: flex;
-  width: 100px;
-  height: 30px;
+  width: 6.25rem;
+  height: 1.875rem;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 .carousel-circle-navigation ul li {
@@ -450,19 +472,20 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 
 /* Section Assessoria em Obras */
 .conteudo-direita {
-  width: 530px;
-  min-height: 450px;
+  margin-right: 25%;
+  margin-left: 6rem;
+  max-width: 33.125rem;
+  height: auto; 
   display: flex;
   flex-direction: column;
   justify-content: center;
+  justify-self: end;
   align-self: center;
-  margin-right: 25%;
-  margin-left: auto;
 }
 
 .imagem-esquerda {
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
   object-fit: cover;
 }
@@ -471,7 +494,7 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 /* Section Diferenciais */
 #diferenciais {
   background-color: #c4cfb8;
-  padding: 60px 0px;
+  padding: 3.75rem 0px;
 }
 
 .cards {
@@ -484,28 +507,28 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 
 .card {
   background-color: #fff;
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   border-radius: 10px;
   text-align: center;
   align-content: center;
-  padding: 30px;
+  padding: 1.875rem;
 }
 
 .card:hover {
   /* Sombra aparece só ao interagir */
-  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0.625rem 0.625rem 1.5rem rgba(0, 0, 0, 0.3);
 }
 
 .card img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 20px;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .card p {
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 1rem;
+  line-height: 1.5625rem;
   text-align: center;
 }
 /* Fim Diferenciais */
@@ -513,34 +536,44 @@ nav ul li:not(.dropdown) a.hover-effect:hover::after, span.hover-effect:hover::a
 /* ----- Fim Index ------*/
 
 /* Contato*/
+
+#contato{
+  height: auto;
+  padding: 5rem 0;
+}
+
 #contato p {
-  margin: 0 0 20px 0;
+  margin: 0 0 1.25rem 0;
 }
 
 #contato h1 {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 /* Fim Contato*/
 
 /* Formulário */
+
 .formulario {
-  width: 650px;
-  margin: 100px 25% 100px auto;
+  width: 75%;
+  max-width: 36.5rem;
   display: flex;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
+  margin-left: auto;
+  margin-right: 25%;
 }
+
 
 .formulario input,
 .formulario textarea,
 .formulario select {
-  margin: 2px 0 30px 0;
-  padding: 10px;
+  margin: 2px 0 1.875rem 0;
+  padding: 0.625rem;
   border: 1px solid #000;
   border-radius: 3px;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
 }
 
@@ -556,14 +589,14 @@ select {
 
 .formulario button {
   background-color: #6b6e55;
-  height: 44px;
-  width: 650px;
+  height: 2.75rem;
+  width: 100%;
   color: white;
-  font: 16px "Poppins";
+  font: 1rem "Poppins";
   font-weight: 650;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.0.5rem;
   border: none;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   align-content: center;
   text-align: center;
   text-decoration: none;
@@ -579,7 +612,7 @@ select {
 /* Rodapé*/
 footer {
   background-color: #c4cfb8;
-  height: 270px;
+  height: 16.875rem;
   justify-items: center;
 }
 
@@ -588,7 +621,7 @@ footer {
   max-width: 75%;
   display: flex;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 3.125rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -601,36 +634,36 @@ footer {
 .footer-contatos {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .footer-contatos a,
 .footer-enderecos span {
-  font: 14px "Poppins";
+  font: 0.875rem "Poppins";
   text-align: justify;
   color: #282828;
   text-decoration: none;
-  line-height: 30px;
+  line-height: 1.875rem;
 }
 
 .contato-item {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
   margin: 2px 0;
 }
 
 .contato-item img,
 .footer-enderecos img {
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
 }
 
 /*Endereços*/
 .footer-enderecos {
   display: flex;
-  width: 300px;
-  gap: 16px;
+  width: 18.75rem;
+  gap: 1rem;
 }
 
 #endereco {
@@ -639,13 +672,13 @@ footer {
 }
 
 #endereco a {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 /*Créditos*/
 #footer-credits p {
-  margin-top: 20px;
-  font-size: 12px;
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
   color: #5b5959;
 }
 
@@ -674,7 +707,7 @@ footer {
   opacity: 0.5;
   z-index: 1;
   height: 99.5%;
-    transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 
 .banner-container::before {
@@ -682,14 +715,14 @@ footer {
   white-space: pre-line;
   color: white;
   font-family: Lora, serif;
-  font-size: 60px;
+  font-size: 3.75rem;
   letter-spacing: 2px;
   position: absolute;
   top: 50%;
   margin-left: 12.5%;
   transform: translateY(-50%);
   z-index: 2;
-  text-shadow: #000 4px 4px 6px;
+  text-shadow: #000 0.25rem 0.25rem 6px;
 }
 
 .frase.paginas {
@@ -701,50 +734,47 @@ footer {
 #qualidade h1,
 #incluso h1,
 #porque h1 {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .conteudo-esquerda li,
 .conteudo-direita li {
-  font: 14px "Poppins";
+  font: 0.875rem "Poppins";
   text-align: justify;
-  line-height: 25px;
+  line-height: 1.5625rem;
   color: #282828;
-  margin: 15px 0;
+  margin: 0.9375rem 0;
   list-style-position: inside;
 }
 
 .verde {
   background-color: #c4cfb8;
 }
-
-#botao-qualidade {
-  margin-top: 20px;
-}
 /*Fim Qualidade*/
 
 /* Slide Trabalhos realizados */
 #trabalhos-realizados {
-  height: 830px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  padding: 1rem;
 }
 
 #trabalhos-realizados h1 {
-  margin-bottom: 70px;
-  margin-top: 70px;
+  margin-bottom: 4.375rem;
+  margin-top: 4.375rem;
 }
 
 .trabalhos-realizados-carousel,
 .depoimentos-carousel {
   display: flex;
   width: 75%;
-  height: 570px;
   flex-direction: column;  
   justify-content: center;
   align-items: center;
+
 }
 
 .trabalhos-realizados-carousel-imgs {
@@ -753,6 +783,7 @@ footer {
   justify-content: space-between;
   overflow: hidden;
   transition: opacity 0.5s ease-in-out;
+
 }
 
 .trabalhos-realizados-carousel-imgs.realizados-ativo {
@@ -761,7 +792,7 @@ footer {
 }
 
 #navegacao-trabalhos ul {
-  width: 250px;
+  width: 15.625rem;
 }
 
 #navegacao-trabalhos li{
@@ -769,9 +800,23 @@ footer {
 }
 
 .trabalhos-realizados-carousel-imgs img {
-  width: 406px;
-  height: 565px;
+  max-width: 100%;
 }
+
+.slide-moveis-esquerda, .slide-moveis-meio, .slide-moveis-direita{
+  width: 25.375rem;
+  height: auto;
+}
+
+.slide-moveis-esquerda{
+  margin-right: 30px;
+}
+
+.slide-moveis-direita{
+  margin-left: 30px;
+}
+
+
 /* Fim Trabalhos realizados */
 /* ----- Fim Página Móveis Planejados ------*/
 
@@ -814,13 +859,13 @@ footer {
   background-color: #c4cfb8;
   color: #282828;
   cursor: pointer;
-  height: 48px;
+  height: 3rem;
   width: 100%;
   text-align: left;
   border: none;
-  border-bottom: 1.5px solid #282828;
+  border-bottom: 0.8px solid #282828;
   transition: 0.4s;
-  margin-top: 20px;
+  margin-top: 1.25rem;
   font-weight: 700;
   font-family: Poppins, sans-serif;
 }
@@ -841,21 +886,20 @@ footer {
 .accordion:after {
   content: "";
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 1.25rem;
+  height: 1.25rem;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-180 -1000 960 960' fill='%231f1f1f'><path d='M400-80 0-480l400-400 71 71-329 329 329 329-71 71Z'/></svg>");
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(-90deg); /* seta para cima */
   transition: transform 0.3s ease;
   float: right;
-  margin-left: 5px;
+  margin-left: 0.3125rem;
 }
 
 .accordion.active:after {
   transform: rotate(90deg); /* seta para baixo */
 }
-
 
 .accordion.active:first-of-type {
   cursor: default; /* cursor normal, sem a mãozinha */
@@ -865,23 +909,22 @@ footer {
 /* Section Portfólio*/
 #portfolio h1 {
   text-align: center;
-  margin: 80px 0 65px 0;
+  margin: 5rem 0 65px 0;
 }
 
-#porfolio-container {
+#portfolio-container {
   width: 100%;
-  height: auto;
   display: grid;
-  grid-template-columns: repeat(3, 0fr);
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 5px;
+  grid-template-columns: repeat(3, 1fr); /* sempre 3 colunas */
+  gap: 1.5rem;
+  padding: 0 1rem;
+  justify-items: center;
 }
 
 .portfolio-card {
-  width: 598px;
-  height: 338px;
-  margin: 15px 15px;
+  width: 100%;
+  aspect-ratio: 16/9; /* mantém proporção responsiva */
+  max-width: 37.375rem; /* limite para telas grandes */
   position: relative;
   cursor: pointer;
 }
@@ -889,7 +932,10 @@ footer {
 .portfolio-card img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
+
 
 .portfolio-card::before {
   content: "";
@@ -904,7 +950,7 @@ footer {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   z-index: 2;
-  text-shadow: #000 4px 4px 6px;
+  text-shadow: #000 0.25rem 0.25rem 6px;
   transition: transform 0.5s ease;
 }
 
@@ -960,37 +1006,37 @@ footer {
   #slide-image {
     max-width: 90vw;
     max-height: 80vh;
-    border-radius: 8px;
-    box-shadow: 0 0 20px #000;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1.25rem #000;
   }
   /* Navegação */
   .nav-button {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 40px;
+    font-size: 2.5rem;
     color: white;
     background: rgba(0,0,0,0.4);
     border: none;
     cursor: pointer;
-    padding: 10px 15px;
+    padding: 0.625rem 0.9375rem;
     user-select: none;
   }
   #prev-btn {
-    left: 20px;
+    left: 1.25rem;
   }
   #next-btn {
-    right: 20px;
+    right: 1.25rem;
   }
   #close-btn {
     position: fixed;
-    top: 20px; right: 20px;
-    font-size: 30px;
+    top: 1.25rem; right: 1.25rem;
+    font-size: 1.875rem;
     color: white;
     background: rgba(0,0,0,0.4);
     border: none;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 0.3125rem 0.625rem;
   }
 
 /* Fim Portfólio*/
@@ -1005,8 +1051,8 @@ footer {
 }
 
 .frase-assessoria h2 {
-  width: 820px;
-  padding: 0 20px;
+  width: 51.25rem;
+  padding: 0 1.25rem;
 }
 /*Fim Banner*/
 
@@ -1021,19 +1067,19 @@ footer {
 .frase-botao h2 {
   width: auto;
   position: relative;
-  bottom: 25px;
-  padding-top: 30px;
+  bottom: 1.5625rem;
+  padding-top: 1.875rem;
 }
 
 #botao-container {
-  width: 450px;
-  height: 60px;
+  width: 28.125rem;
+  height: 3.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #c4cfb8;
   position: relative;
-  bottom: 10px;
+  bottom: 0.625rem;
   z-index: 4;
 }
 
@@ -1043,7 +1089,7 @@ footer {
   position: absolute;
   top: 58%;
   width: 90%;
-  height: 0.5px;
+  height: 0.0.3125rem;
   background: #282828;
 }
 /* Fim Frase e Botão*/
@@ -1052,41 +1098,46 @@ footer {
 
 /*Página Sobre Nós*/
 
+#videoApresentacao{
+  max-height: 90vh;
+}
+
 /*Seção Apresentação*/
 .conteudo-apresentacao {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 120vh;
+  height: auto;
+  padding-bottom: 6rem;
 }
 
 .img-apresentacao-container {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.9375rem;
   align-items: center;
   justify-content: center;
 }
 
 .img-apresentacao-container.marcio {
-  padding: 80px 60px 60px 0;
+  padding: 5rem 3.75rem 3.75rem 0;
 }
 
 .img-apresentacao {
-  width: 350px;
-  height: 350px;
+  width: 21.875rem;
+  height: 21.875rem;
   border-radius: 50%;
 }
 
 .conteudo-direita.apresentacao h1,
 .conteudo-esquerda.apresentacao h1 {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .legenda {
-  font: 14px "Poppins";
+  font: 0.875rem "Poppins";
   text-align: justify;
-  line-height: 10px;
+  line-height: 0.625rem;
   font-weight: 500;
   color: #282828;
 }
@@ -1094,17 +1145,27 @@ footer {
 
 /* Seção Depoimentos*/
 #depoimentos {
-  height: 940px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
+  height: auto;
+  padding-bottom: 4rem;
 }
 
 .card-depoimentos {
-  width: 300px;
-  height: 600px;
+  width: 18.75rem;
+  height: auto;
   background-color: white;
+  padding-bottom: 1rem;
+}
+
+.card-esquerda{
+  margin-right: 30px;
+}
+
+.card-direita{
+  margin-left: 30px;
 }
 
 .depoimentos-carousel {
@@ -1120,8 +1181,8 @@ footer {
 }
 
 .card-depoimentos img {
-  width: 140px;
-  height: 140px;
+  width: 8.75rem;
+  height: 8.75rem;
   border-radius: 50%;
 }
 
@@ -1129,15 +1190,21 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 30px;
-  border-radius: 10px;
+  gap: 0.625rem;
+  padding: 1.875rem;
+  border-radius: 0.625rem;
 }
 
 .card-depoimentos p {
-  margin-top: 20px;
-  line-height: 25px;
+  margin-top: 1.25rem;
+  line-height: 1.5625rem;
 }
+
+#navegacao-depoimentos{
+  margin-bottom: 1.25rem;
+}
+
+
 /* Fim Depoimentos*/
 
 /*Mapa*/
@@ -1145,19 +1212,16 @@ iframe {
   width: 100%;
   height: 50vh;
   border: 0;
-  margin-bottom: -4px;
+  margin-bottom: -0.25rem;
 }
 /*Mapa*/
 
 /*Fim Página Sobre Nós*/
 
 /*Página Trabalhe Conosco*/
-
-
-/* Fim Página Trabalhe Conosco*/
-
 #formulario-trabalhe{
-  height: 135vh;
+  height: auto;
+  padding: 6rem 0;
 }
 
 .conteudo-esquerda.trabalhe{
@@ -1166,21 +1230,21 @@ iframe {
 }
 
 .conteudo-esquerda.trabalhe p{
-  margin: 10px 0;
+  margin: 0.625rem 0;
 }
 
 .conteudo-esquerda.trabalhe h1{
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 /* Estilo atualizado para campo de anexar currículo */
 .file-input-wrapper {
   margin-top: 2px;
-  padding: 10px;
+  padding: 0.625rem;
   border: 1px solid #000;
   border-radius: 3px;
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;  
   position: relative;
 }
@@ -1197,31 +1261,31 @@ iframe {
 }
 
 .upload-icon {
-  width: 25px;
+  width: 1.5625rem;
   position: absolute;
-  right: 12px;
+  right: 0.75rem;
 }
 
 .error-message {
   color: red;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 #formatos-aceitos{
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 #mensagens-alerta{
   display: flex;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 0.3125rem;
 }
 
 .buttons {
   display: flex;
   justify-content: space-between;
   gap: 55px;
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 
 #cancelar-trabalhe{
@@ -1231,3 +1295,5 @@ iframe {
 #cancelar-trabalhe:hover{
   background-color: #e98b1f ;
 }
+
+/* Fim Página Trabalhe Conosco*/
