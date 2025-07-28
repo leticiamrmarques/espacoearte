@@ -53,7 +53,6 @@ header {
   align-items: center;
   justify-content: space-between;
   position: relative;
-
 }
 
 .logo img {
@@ -921,12 +920,13 @@ footer {
   justify-items: center;
 }
 
-.portfolio-card {
+.portfolio-card{
   width: 100%;
   aspect-ratio: 16/9; /* mantém proporção responsiva */
   max-width: 37.375rem; /* limite para telas grandes */
   position: relative;
   cursor: pointer;
+  border-radius: 0.5rem;
 }
 
 .portfolio-card img {
