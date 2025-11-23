@@ -2,7 +2,6 @@ package sistema;
 
 public class PessoaJuridica extends Cliente {
 	
-	// Atributo
     private String cnpj;
     
     // Construtor

@@ -2,7 +2,6 @@ package sistema;
 
 public class PessoaFisica extends Cliente {
 	
-	// Atributos
     private String cpf;
     private String profissao;
     private String estadoCivil;

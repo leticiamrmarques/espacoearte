@@ -30,7 +30,6 @@ public class Compromisso {
     }
 
     // ==================== CONSTRUTOR ====================
-
     public Compromisso(LocalDateTime dataHora, String descricao, Tipo tipo,
                        String funcionario, Cliente cliente) {
         if (cliente == null) throw new IllegalArgumentException("Compromisso deve ter um cliente.");
@@ -51,7 +50,6 @@ public class Compromisso {
     }
 
     // ==================== MÉTODOS ====================
-
     public void agendar() {
         this.status = Status.A_CONFIRMAR;
         System.out.println("Compromisso agendado: " + descricao + " (A CONFIRMAR)");
@@ -103,7 +101,6 @@ public class Compromisso {
     }
 
     // ==================== GETTERS E SETTERS ====================
-
     public int getIdCompromisso() { return idCompromisso; }
 
     public LocalDateTime getDataHora() { return dataHora; }

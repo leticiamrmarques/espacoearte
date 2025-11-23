@@ -14,7 +14,7 @@ public abstract class Cliente {
     private String endereco;
 
     private List<Servico> servicos;
-    private List<Compromisso> compromissos; // novo
+    private List<Compromisso> compromissos;
 
     public Cliente(String nome, String telefone, String email, String endereco) {
         this.idCliente = proximoId++;

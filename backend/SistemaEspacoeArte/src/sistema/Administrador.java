@@ -43,7 +43,7 @@ public class Administrador {
         System.out.println("Email: " + form.getEmail());
         System.out.println("Telefone: " + form.getTelefone());
         System.out.println("Mensagem: " + form.getMensagem());
-        System.out.println("Como conheceu: " + form.getComoConheceu()); // Agora retorna enum
+        System.out.println("Como conheceu: " + form.getComoConheceu());
         System.out.println("Visualizado: " + form.isVisualizado());
     }
 
@@ -224,8 +224,6 @@ public class Administrador {
     }
 
     // ===================== COMPROMISSOS =====================
-    
-    // ATUALIZADO: Agora aceita Compromisso.Tipo ao invés de String
     public Compromisso criarCompromisso(LocalDateTime dataHora, String descricao, Compromisso.Tipo tipo,
                                        String funcionario, Cliente cliente) {
         if (!verificarLogin() || cliente == null) return null;

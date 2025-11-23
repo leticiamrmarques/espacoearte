@@ -50,7 +50,7 @@ public class Servico {
 
     public List<Compromisso> getCompromissos() { return compromissos; }
     
-    // ADICIONADO: Métodos para gerenciar documentos
+    // Métodos para gerenciar documentos
     public List<Documento> getDocumentos() { return documentos; }
     
     public void anexarDocumento(Documento documento) {

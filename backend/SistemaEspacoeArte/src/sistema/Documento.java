@@ -2,7 +2,6 @@ package sistema;
 
 public class Documento {
 	
-	//Atributos
     private String nome;
     private String caminho;
     

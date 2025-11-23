@@ -23,7 +23,7 @@ public class SistemaTeste {
         System.out.println("\n--- Passo 1: Cliente envia formulário ---");
         Formulario form1 = new Formulario("Maria Silva", "11987654321",
                 "maria@email.com", "Gostaria de contratar serviço de marcenaria para cozinha",
-                Formulario.ComoConheceu.INSTAGRAM); // ATUALIZADO: usando enum
+                Formulario.ComoConheceu.INSTAGRAM);
         form1.enviar();
 
         System.out.println("\n--- Passo 2: Administrador visualiza formulário ---");
@@ -67,7 +67,7 @@ public class SistemaTeste {
         LocalDateTime dataCompromisso = LocalDateTime.of(2025, 12, 15, 14, 30);
         Compromisso comp1 = adm.criarCompromisso(dataCompromisso,
                 "Reunião para projeto de decoração", 
-                Compromisso.Tipo.REUNIAO, // ATUALIZADO: usando enum
+                Compromisso.Tipo.REUNIAO,
                 "Carlos Mendes", cliente1);
         comp1.exibirDetalhes();
 
@@ -115,8 +115,8 @@ public class SistemaTeste {
         Curriculo curr1 = new Curriculo("Ana Costa", "11988887777",
                 "ana@email.com", "Projetos de interiores", 2500.0,
                 "Tenho 3 anos de experiência", 
-                Curriculo.ComoConheceu.GOOGLE, // ATUALIZADO: usando enum (Google ao invés de LinkedIn)
-                curriculoDoc); // ATUALIZADO: passando Documento
+                Curriculo.ComoConheceu.GOOGLE,
+                curriculoDoc); 
         curr1.enviar();
 
         System.out.println("\n--- Passo 2: Administrador visualiza currículo ---");
@@ -146,7 +146,7 @@ public class SistemaTeste {
         System.out.println("\n--- Passo 1: Empresa envia formulário ---");
         Formulario form2 = new Formulario("Empresa XYZ Ltda", "1133334444",
                 "contato@xyz.com.br", "Interesse em móveis planejados para ambiente corporativo",
-                Formulario.ComoConheceu.INDICACAO); // ATUALIZADO: usando enum
+                Formulario.ComoConheceu.INDICACAO);
         form2.enviar();
 
         System.out.println("\n--- Passo 2: Administrador visualiza formulário ---");
@@ -179,7 +179,7 @@ public class SistemaTeste {
         System.out.println("\n--- Passo 3: Criação de cliente PF via formulário ---");
         Formulario formPF = new Formulario("Joao Santos", "11977776666",
                 "joao@email.com", "Desejo contratar serviços de decoração", 
-                Formulario.ComoConheceu.INSTAGRAM); // ATUALIZADO: usando enum
+                Formulario.ComoConheceu.INSTAGRAM);
         formPF.enviar();
         PessoaFisica pfForm = adm.criarClientePessoaFisicaDoFormulario(
                 formPF, "504 sul, 456", "98765432109", "Advogado", "Casado"
@@ -188,7 +188,7 @@ public class SistemaTeste {
         System.out.println("\n--- Passo 4: Criação de cliente PJ via formulário ---");
         Formulario formPJ = new Formulario("Empresa ABC Ltda", "11988887777",
                 "contato@abc.com.br", "Interessada em serviços corporativos", 
-                Formulario.ComoConheceu.GOOGLE); // ATUALIZADO: usando enum
+                Formulario.ComoConheceu.GOOGLE);
         formPJ.enviar();
         PessoaJuridica pjForm = adm.criarClientePessoaJuridicaDoFormulario(
                 formPJ, "104 norte, 100", "98765432000100"
@@ -216,7 +216,7 @@ public class SistemaTeste {
         System.out.println("\n--- Teste de cancelamento de compromisso ---");
         Compromisso comp2 = adm.criarCompromisso(LocalDateTime.now().plusDays(5),
                 "Consultoria empresarial", 
-                Compromisso.Tipo.REUNIAO, // ATUALIZADO: usando enum
+                Compromisso.Tipo.REUNIAO,
                 "Pedro Silva", cliente2);
         comp2.exibirDetalhes();
         comp2.cancelar();
