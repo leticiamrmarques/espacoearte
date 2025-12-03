@@ -29,9 +29,9 @@ h1 {
 }
 
 p {
-  font: 0.875rem "Poppins";
+  font: 1rem "Poppins";
   text-align: justify;
-  line-height: 2.75rem;
+  line-height: 2.4rem;
   color: #282828;
 }
 
@@ -709,6 +709,11 @@ footer {
   transition: opacity 0.5s ease;
 }
 
+.portfolio-card::after{
+  border-radius: 0.5rem;
+    height: 99%;
+}
+
 .banner-container::before {
   content: "MÓVEIS \APLANEJADOS";
   white-space: pre-line;
@@ -738,7 +743,7 @@ footer {
 
 .conteudo-esquerda li,
 .conteudo-direita li {
-  font: 0.875rem "Poppins";
+  font: 1rem "Poppins";
   text-align: justify;
   line-height: 1.5625rem;
   color: #282828;
@@ -926,7 +931,6 @@ footer {
   max-width: 37.375rem; /* limite para telas grandes */
   position: relative;
   cursor: pointer;
-  border-radius: 0.5rem;
 }
 
 .portfolio-card img {
