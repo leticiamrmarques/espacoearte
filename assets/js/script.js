@@ -377,3 +377,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 })();
+
+// Adicione este código no final do seu script.js
+
+// ------------- Menu Fixo com Scroll - SOLUÇÃO SIMPLES -------------------
+let lastScroll = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  
+  // Se rolar para cima, mostra o menu
+  if (currentScroll < lastScroll && currentScroll > 0) {
+    header.classList.add('show');
+  } 
+  // Se rolar para baixo ou estiver no topo, esconde
+  else {
+    header.classList.remove('show');
+  }
+  
+  lastScroll = currentScroll;
+});
+// ------------- Fim Menu Fixo com Scroll -------------------
