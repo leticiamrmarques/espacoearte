@@ -399,3 +399,62 @@ window.addEventListener('scroll', () => {
   lastScroll = currentScroll;
 });
 // ------------- Fim Menu Fixo com Scroll -------------------
+
+
+// Adicione este código no final do seu script.js
+
+//------------- Depoimentos Slides --------
+const depoimentosCarousel = document.querySelectorAll(".depoimentos-carousel-container");
+
+if (depoimentosCarousel.length > 0) {
+  const leftDepoimentos = document.getElementById("left-depoimentos");
+  const rightDepoimentos = document.getElementById("right-depoimentos");
+  const circulosDepoimentos = document.querySelectorAll("#navegacao-depoimentos ul li");
+
+  let contadorDepoimentos = 0;
+
+  function atualizarSlideDepoimentos() {
+    depoimentosCarousel.forEach((container, i) => {
+      container.classList.toggle("depoimentos-ativo", i === contadorDepoimentos);
+      if (circulosDepoimentos[i]) {
+        circulosDepoimentos[i].classList.toggle("active", i === contadorDepoimentos);
+      }
+    });
+
+    if (leftDepoimentos && rightDepoimentos) {
+      leftDepoimentos.style.opacity = contadorDepoimentos === 0 ? "0" : "1";
+      rightDepoimentos.style.opacity = contadorDepoimentos === depoimentosCarousel.length - 1 ? "0" : "1";
+
+      leftDepoimentos.style.cursor = contadorDepoimentos === 0 ? "default" : "pointer";
+      rightDepoimentos.style.cursor = contadorDepoimentos === depoimentosCarousel.length - 1 ? "default" : "pointer";
+    }
+  }
+
+  if (rightDepoimentos) {
+    rightDepoimentos.addEventListener("click", () => {
+      if (contadorDepoimentos < depoimentosCarousel.length - 1) {
+        contadorDepoimentos++;
+        atualizarSlideDepoimentos();
+      }
+    });
+  }
+
+  if (leftDepoimentos) {
+    leftDepoimentos.addEventListener("click", () => {
+      if (contadorDepoimentos > 0) {
+        contadorDepoimentos--;
+        atualizarSlideDepoimentos();
+      }
+    });
+  }
+
+  circulosDepoimentos.forEach((circulo, i) => {
+    circulo.addEventListener("click", () => {
+      contadorDepoimentos = i;
+      atualizarSlideDepoimentos();
+    });
+  });
+
+  window.addEventListener("load", atualizarSlideDepoimentos);
+}
+//------------- Fim Depoimentos Slides --------
