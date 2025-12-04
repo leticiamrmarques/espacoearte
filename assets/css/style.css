@@ -31,7 +31,7 @@ h1 {
 p {
   font: 1rem "Poppins";
   text-align: justify;
-  line-height: 2.4rem;
+  line-height: 2.1rem;
   color: #282828;
 }
 
@@ -872,6 +872,7 @@ footer {
   margin-top: 1.25rem;
   font-weight: 700;
   font-family: Poppins, sans-serif;
+  font-size: 1rem;
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
