@@ -1,0 +1,676 @@
+/* ========================================
+   RESPONSIVIDADE - ESPAÇO E ARTE
+   ======================================== */
+
+/* Large devices (desktops, 992px a 1200px) */
+@media (max-width: 1200px) {
+  
+  /* ===== TIPOGRAFIA GERAL ===== */
+  a {
+    font-size: 0.75rem;
+  }
+
+  p, 
+  .footer-contatos a, 
+  .footer-enderecos span,
+  .conteudo-esquerda li, 
+  .conteudo-direita li {
+    font-size: 0.875rem;
+    line-height: 1.8rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  /* ===== HEADER E MENU ===== */
+  header {
+    height: 140px;
+  }
+
+  #header-container {
+    max-width: 85%;
+  }
+
+  .logo img {
+    height: 85px;
+  }
+
+  nav {
+    margin-left: 3rem;
+  }
+
+  nav ul {
+    gap: 30px;
+  }
+
+  /* Dropdown ajustado */
+  .menu-drop-moveis { width: 130px; }
+  .menu-drop-moveis.opcao-dropdown { width: 138px; }
+  .menu-drop-projetos { width: 145px; }
+  .menu-drop-projetos.opcao-dropdown { width: 153px; }
+  .menu-drop-sobre { width: 75px; }
+  .menu-drop-sobre.opcao-dropdown { width: 82px; }
+
+  .opcao-dropdown a {
+    font-size: 0.7rem;
+  }
+
+  /* ===== BANNER ===== */
+  .banner-container::before {
+    font-size: 3rem;
+    margin-left: 10%;
+  }
+
+  /* ===== SEÇÕES DE CONTEÚDO ===== */
+  .frase h2 {
+    width: 450px;
+  }
+
+  .frase-assessoria h2 {
+    width: 680px;
+  }
+
+  .conteudo-esquerda {
+    margin-left: 15%;
+    margin-right: 3rem;
+    max-width: 28rem;
+  }
+
+  .conteudo-direita {
+    margin-right: 15%;
+    margin-left: 3rem;
+    max-width: 28rem;
+  }
+
+  .conteudo p {
+    margin: 1.2rem 0;
+  }
+
+  .conteudo-esquerda li,
+  .conteudo-direita li {
+    margin: 0.6rem 0;
+    line-height: 1.3rem;
+  }
+
+  /* ===== BOTÕES ===== */
+  .btn-orcamento {
+    height: 2.4rem;
+    width: 16rem;
+  }
+
+  .btn-orcamento span {
+    font-size: 0.875rem;
+  }
+
+  /* ===== CARROSSÉIS ===== */
+  .projeto-interiores-container,
+  #depoimentos-container {
+    width: 80%;
+    margin: 3.5rem 0 2.5rem 0;
+  }
+
+  .projeto-interiores {
+    padding-bottom: 2.5rem;
+  }
+
+  .projeto-interiores-carousel,
+  .trabalhos-realizados-carousel,
+  .depoimentos-carousel {
+    width: 80%;
+  }
+
+  .carousel-btns {
+    width: 85%;
+  }
+
+  .carousel-circle-navigation ul {
+    margin-top: 1.5rem;
+  }
+
+  /* Imagens dos carrosséis */
+  .img-wrapper::after {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .slide-moveis-esquerda, 
+  .slide-moveis-meio, 
+  .slide-moveis-direita {
+    width: 22rem;
+  }
+
+  /* ===== DIFERENCIAIS ===== */
+  #diferenciais {
+    padding: 2.5rem 0;
+  }
+
+  .cards {
+    max-width: 80%;
+    gap: 1rem;
+  }
+
+  .card {
+    width: 11rem;
+    height: 11rem;
+    padding: 1.5rem;
+  }
+
+  .card img {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .card p {
+    font-size: 0.875rem;
+    line-height: 1.3rem;
+  }
+
+  /* ===== CONTATO ===== */
+  #contato {
+    padding: 3.5rem 0;
+  }
+
+  #contato h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  #contato p {
+    margin-bottom: 0.8rem;
+  }
+
+  /* ===== FORMULÁRIO ===== */
+  .formulario {
+    max-width: 32rem;
+    font-size: 0.875rem;
+    margin-right: 15%;
+  }
+
+  .formulario input,
+  .formulario textarea,
+  .formulario select {
+    margin-bottom: 1.2rem;
+    font-size: 0.8rem;
+  }
+
+  .formulario button {
+    height: 2.4rem;
+    font-size: 0.875rem;
+  }
+
+  .file-input-wrapper {
+    font-size: 0.8rem;
+  }
+
+  .error-message, 
+  #formatos-aceitos {
+    font-size: 0.7rem;
+  }
+
+  .upload-icon {
+    width: 1.3rem;
+  }
+
+  .buttons {
+    margin-top: 2rem;
+  }
+
+  /* ===== RODAPÉ ===== */
+  footer {
+    height: 15rem;
+  }
+
+  .footer-container {
+    max-width: 85%;
+    padding-top: 2.5rem;
+  }
+
+  .footer-contatos a,
+  .footer-enderecos span {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+  }
+
+  .contato-item img,
+  .footer-enderecos img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  #footer-credits p {
+    font-size: 0.65rem;
+  }
+
+  /* ===== PÁGINA MÓVEIS PLANEJADOS ===== */
+  #trabalhos-realizados h1 {
+    margin: 3.5rem 0 3rem;
+  }
+
+  #navegacao-trabalhos ul {
+    width: 13rem;
+  }
+
+  /* ===== PÁGINA PROJETOS ===== */
+  .accordion {
+    height: 2.5rem;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .accordion:after {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  #portfolio h1 {
+    margin: 3.5rem 0 2.5rem;
+  }
+
+  #portfolio-container {
+    gap: 1.2rem;
+    padding: 0 2rem;
+  }
+
+  .portfolio-card::before {
+    font-size: 34px;
+  }
+
+  /* Overlay */
+  #slide-image {
+    max-width: 85vw;
+    max-height: 75vh;
+  }
+
+  .nav-button {
+    font-size: 2rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  #prev-btn {
+    left: 1rem;
+  }
+
+  #next-btn {
+    right: 1rem;
+  }
+
+  #close-btn {
+    font-size: 1.5rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  /* ===== PÁGINA ASSESSORIA ===== */
+  .frase-botao h2 {
+    width: auto;
+    max-width: 80%;
+    padding-top: 1.5rem;
+    bottom: 1.2rem;
+  }
+
+  #botao-container {
+    width: 24rem;
+    height: 3.2rem;
+  }
+
+  /* ===== PÁGINA SOBRE NÓS ===== */
+  #videoApresentacao {
+    max-height: 75vh;
+  }
+
+  .conteudo-apresentacao {
+    padding-bottom: 3.5rem;
+  }
+
+  .img-apresentacao-container.marcio {
+    padding: 3.5rem 2.5rem 2.5rem 0;
+  }
+
+  .img-apresentacao {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .conteudo-direita.apresentacao h1,
+  .conteudo-esquerda.apresentacao h1 {
+    margin-bottom: 1.2rem;
+  }
+
+  .legenda {
+    font-size: 0.8rem;
+  }
+
+  /* Depoimentos */
+  #depoimentos {
+    padding-bottom: 2.5rem;
+  }
+
+  .card-depoimentos {
+    width: 17rem;
+    padding: 1.5rem;
+  }
+
+  .card-depoimentos img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .card-depoimentos p {
+    margin-top: 1rem;
+    line-height: 1.3rem;
+  }
+
+  .card-esquerda {
+    margin-right: 20px;
+  }
+
+  .card-direita {
+    margin-left: 20px;
+  }
+
+  /* Mapa */
+  iframe {
+    height: 40vh;
+  }
+
+  /* ===== PÁGINA TRABALHE CONOSCO ===== */
+  #formulario-trabalhe {
+    padding: 4rem 0;
+  }
+
+  .conteudo-esquerda.trabalhe {
+    margin-top: 80px;
+  }
+
+  .conteudo-esquerda.trabalhe h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .conteudo-esquerda.trabalhe p {
+    margin: 0.5rem 0;
+  }
+}
+
+/* ========================================
+   Medium devices (tablets, 768px a 992px)
+   ======================================== */
+@media (max-width: 992px) {
+  
+  /* ===== AJUSTES GERAIS ===== */
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  h2 {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+    line-height: 1.6rem;
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    height: 120px;
+  }
+
+  #header-container {
+    max-width: 90%;
+  }
+
+  .logo img {
+    height: 75px;
+  }
+
+  nav {
+    margin-left: 2rem;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  nav a {
+    font-size: 0.7rem;
+  }
+
+  /* ===== LAYOUT DE CONTEÚDO ===== */
+  .conteudo {
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+  }
+
+  .conteudo-esquerda,
+  .conteudo-direita {
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 2rem 0;
+  }
+
+  .imagem-esquerda,
+  .imagem-direita {
+    width: 100%;
+    max-height: 60vh;
+    object-fit: cover;
+  }
+
+  /* ===== FRASE DESTAQUE ===== */
+  .frase {
+    padding: 2.5rem;
+  }
+
+  .frase h2 {
+    width: 90%;
+    max-width: 500px;
+    font-size: 0.9rem;
+  }
+
+  .frase-assessoria h2 {
+    width: 90%;
+    max-width: 600px;
+  }
+
+  /* ===== BOTÕES ===== */
+  .btn-orcamento {
+    width: 100%;
+    max-width: 18rem;
+    margin: 0 auto;
+  }
+
+  /* ===== CARROSSÉIS ===== */
+  .projeto-interiores-carousel,
+  .trabalhos-realizados-carousel,
+  .depoimentos-carousel {
+    width: 85%;
+  }
+
+  .carousel-btns {
+    width: 90%;
+  }
+
+  /* ===== CARDS DIFERENCIAIS ===== */
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 12rem;
+    height: 12rem;
+  }
+
+  /* ===== FORMULÁRIO ===== */
+  .formulario {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+
+  /* ===== RODAPÉ ===== */
+  footer {
+    height: auto;
+    padding: 2rem 0;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-enderecos {
+    justify-content: center;
+  }
+
+  /* ===== PORTFÓLIO ===== */
+  #portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* ===== APRESENTAÇÃO ===== */
+  .conteudo-apresentacao {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .img-apresentacao-container {
+    order: -1;
+    padding: 2rem 0 !important;
+  }
+
+  .conteudo-direita.apresentacao,
+  .conteudo-esquerda.apresentacao {
+    order: 1;
+  }
+
+  /* ===== DEPOIMENTOS ===== */
+  .depoimentos-carousel-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .card-depoimentos {
+    width: 100%;
+    max-width: 24rem;
+    margin: 0 !important;
+  }
+
+  /* ===== TRABALHE CONOSCO ===== */
+  .conteudo-esquerda.trabalhe {
+    margin-top: 0;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* ========================================
+   Small adjustments (below 768px prep)
+   ======================================== */
+@media (max-width: 768px) {
+  
+  /* Preparação para mobile - ajustes finos */
+  .banner-container::before {
+    font-size: 2rem;
+    margin-left: 5%;
+  }
+
+  #portfolio-container {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-card::before {
+    font-size: 28px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .img-apresentacao {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+/* Ajuste do menu */
+/* Adicione estas media queries no seu arquivo CSS (style.css ou responsividade.css) */
+
+/* Corrige sobreposição entre 1420px e 1200px */
+@media (max-width: 1420px) and (min-width: 1271px) {
+  .logo img {
+    height: 85px; /* Reduz de 100px para 85px */
+  }
+  
+  #header-container {
+    height: 85px;
+  }
+  
+  nav ul {
+    gap: 35px; /* Reduz o espaço entre os itens do menu */
+  }
+  
+  nav a {
+    font-size: 0.813rem; /* Reduz levemente o tamanho da fonte */
+  }
+}
+
+@media (max-width: 1270px) and (min-width: 1200px) {
+  .logo img {
+    height: 82px; /* Reduz de 100px para 85px */
+  }
+  
+  #header-container {
+    height: 82px;
+  }
+  
+  nav ul {
+    gap: 32px; /* Reduz o espaço entre os itens do menu */
+  }
+  
+  nav a {
+    font-size: 0.7rem; /* Reduz levemente o tamanho da fonte */
+  }
+}
+
+/* Corrige sobreposição entre 1013px e 992px */
+@media (max-width: 1013px) and (min-width: 993px) {
+  .logo img {
+    height: 80px; /* Reduz de 100px para 80px */
+  }
+  
+  #header-container {
+    height: 80px;
+  }
+  
+  nav ul {
+    gap: 30px;
+  }
+  
+  nav a {
+    font-size: 0.75rem;
+  }
+}
+
+/* Ajuste adicional para telas muito próximas de 1200px */
+@media (max-width: 1250px) and (min-width: 1201px) {
+  nav {
+    margin-left: 4rem; /* Reduz a margem esquerda */
+  }
+}
+
+/* Ajuste adicional para telas próximas de 1013px */
+@media (max-width: 1050px) and (min-width: 993px) {
+  nav {
+    margin-left: 3rem;
+  }
+}
